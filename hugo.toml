@@ -1,0 +1,28 @@
+baseURL = 'https://botharetrue.com/'
+languageCode = 'en-us'
+title = 'Both Are True'
+theme = 'PaperMod'
+
+[params]
+  description = "A shelter from the swarm."
+  author = "Alex Dobrenko"
+  defaultTheme = "auto"
+  showReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:alex@botharetrue.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "Essays"
+    url = "/posts/"
+    weight = 20
