@@ -31,3 +31,8 @@ theme = 'PaperMod'
     name = "Evergreen"
     url = "/categories/evergreen/"
     weight = 30
+  [[menu.main]]
+    identifier = "reading"
+    name = "Reading"
+    url = "/categories/reading/"
+    weight = 40

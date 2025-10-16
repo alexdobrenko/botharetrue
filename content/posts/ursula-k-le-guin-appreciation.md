@@ -2,6 +2,7 @@
 title: "Ursula K. Le Guin Appreciation Post"
 date: 2025-09-14
 draft: false
+categories: ["reading"]
 ---
 
 I'm reading her book right now, No Time To Spare, and am filled with this familiar feeling of how it feels when you're reading someone and just feel...seen. Understood, yes, but more than that, like your own way of understanding itself is being reflected back to you.

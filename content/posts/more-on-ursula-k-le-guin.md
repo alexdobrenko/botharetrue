@@ -2,6 +2,7 @@
 title: "More on Ursula K. Le Guin"
 date: 2025-09-15
 draft: false
+categories: ["reading"]
 ---
 
 Reading more of her this morning and I don't want to stop. There is a joy in her words, an aliveness, that is contagious. I feel as though she does not want to stop writing, and thus, perhaps, I don't want to stop reading.
