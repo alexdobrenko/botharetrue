@@ -3,6 +3,7 @@ title: "How to Paste Screenshots into Claude Code (Mac + PC Guide)"
 date: 2025-09-28
 draft: false
 tags: ["tech", "tips"]
+url: "/paste-screenshots-into-claude-code/"
 ---
 
 Hi it's me Alex. Did you know that you can paste images into Claude Code with control-v (instead of command v)?

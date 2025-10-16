@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Pages on Both Are True</title>
+    <link>http://localhost:1313/pages/</link>
+    <description>Recent content in Pages on Both Are True</description>
+    <generator>Hugo -- 0.150.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Paste Screenshots into Claude Code (Mac &#43; PC Guide)</title>
+      <link>http://localhost:1313/pages/paste-screenshots-into-claude-code/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pages/paste-screenshots-into-claude-code/</guid>
+      <description>&lt;p&gt;Hi it&amp;rsquo;s me Alex. Did you know that you can paste images into Claude Code with control-v (instead of command v)?&lt;/p&gt;
+&lt;p&gt;This is big because pasting screenshots is half of how I use the dang AI these days.&lt;/p&gt;
+&lt;p&gt;Lemme tell ya.&lt;/p&gt;
+&lt;h2 id=&#34;mac-macos&#34;&gt;Mac (macOS)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Ctrl+V&lt;/strong&gt; (not Command+V).&lt;/li&gt;
+&lt;li&gt;This lets you paste screenshots or copied images directly into Claude Code blocks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;windows-pc&#34;&gt;Windows (PC)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Alt+V&lt;/strong&gt; (per recent updates).&lt;/li&gt;
+&lt;li&gt;Works the same way: paste screenshots from your clipboard into Claude Code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux--wsl-caveat&#34;&gt;Linux / WSL Caveat&lt;/h2&gt;
+&lt;p&gt;Some users report image paste doesn&amp;rsquo;t always work in terminal environments. If that&amp;rsquo;s you, you may need to fall back on drag-and-drop or file upload until it&amp;rsquo;s patched.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
