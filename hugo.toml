@@ -26,3 +26,8 @@ theme = 'PaperMod'
     name = "Essays"
     url = "/posts/"
     weight = 20
+  [[menu.main]]
+    identifier = "evergreen"
+    name = "Evergreen"
+    url = "/categories/evergreen/"
+    weight = 30

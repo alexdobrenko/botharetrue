@@ -2,6 +2,7 @@
 title: "Inspirations"
 date: 2025-10-03
 draft: false
+categories: ["evergreen"]
 ---
 
 As I venture forth into this new wilderness, I find myself returning again and again to influences and inspirations.

@@ -2,6 +2,7 @@
 title: "Links"
 date: 2025-10-03
 draft: false
+categories: ["evergreen"]
 ---
 
 Inspired by [this](https://matklad.github.io/2025/08/23/links.html) I am starting a links page.

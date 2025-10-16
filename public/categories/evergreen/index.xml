@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Evergreen on Both Are True</title>
+    <link>http://localhost:1313/categories/evergreen/</link>
+    <description>Recent content in Evergreen on Both Are True</description>
+    <generator>Hugo -- 0.150.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/evergreen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inspirations</title>
+      <link>http://localhost:1313/posts/inspirations/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/inspirations/</guid>
+      <description>&lt;p&gt;As I venture forth into this new wilderness, I find myself returning again and again to influences and inspirations.&lt;/p&gt;
+&lt;p&gt;Specifically, I want to write them down, for myself, and share them, for y&amp;rsquo;all. It&amp;rsquo;s way too easy to forget about them in the maelstrom of the day, the hubbub of the night.&lt;/p&gt;
+&lt;p&gt;So, in no particular order, here are some people whose work inspires me and to whom I look when thinking about this next chapter:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Links</title>
+      <link>http://localhost:1313/posts/links/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/links/</guid>
+      <description>&lt;p&gt;Inspired by &lt;a href=&#34;https://matklad.github.io/2025/08/23/links.html&#34;&gt;this&lt;/a&gt; I am starting a links page.&lt;/p&gt;
+&lt;p&gt;What will I put here is to be determined of course.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update (09-20-25):&lt;/strong&gt;
+I need multiple link pages. One is probably best for self-promo and BAT-promo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>People Who Seem Awesome That I&#39;d Love to Work With</title>
+      <link>http://localhost:1313/posts/people-who-seem-awesome/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/people-who-seem-awesome/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://sundogcowboy.com/&#34;&gt;https://sundogcowboy.com/&lt;/a&gt; - Jess Hererra who designed Cody Cook-Parrott&amp;rsquo;s website which seems awesome&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
