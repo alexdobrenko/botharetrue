@@ -1,0 +1,106 @@
+/* Obsidian-style Callouts */
+.callout {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid;
+    border-radius: 4px;
+    background-color: var(--callout-bg, #f8f9fa);
+}
+
+.callout-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.callout-title::before {
+    content: "📝";
+    font-size: 1.2em;
+}
+
+.callout-content {
+    margin-top: 0.5rem;
+}
+
+.callout-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Different callout types */
+.callout-note {
+    border-left-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.callout-note .callout-title::before {
+    content: "📝";
+}
+
+.callout-warning {
+    border-left-color: #f59e0b;
+    background-color: #fffbeb;
+}
+
+.callout-warning .callout-title::before {
+    content: "⚠️";
+}
+
+.callout-important {
+    border-left-color: #8b5cf6;
+    background-color: #f5f3ff;
+}
+
+.callout-important .callout-title::before {
+    content: "🔥";
+}
+
+.callout-tip {
+    border-left-color: #10b981;
+    background-color: #ecfdf5;
+}
+
+.callout-tip .callout-title::before {
+    content: "💡";
+}
+
+.callout-quote,
+.callout-from-the-book {
+    border-left-color: #6366f1;
+    background-color: #eef2ff;
+}
+
+.callout-quote .callout-title::before,
+.callout-from-the-book .callout-title::before {
+    content: "📖";
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .callout {
+        background-color: #1e293b;
+    }
+
+    .callout-note {
+        background-color: #1e3a8a;
+    }
+
+    .callout-warning {
+        background-color: #78350f;
+    }
+
+    .callout-important {
+        background-color: #4c1d95;
+    }
+
+    .callout-tip {
+        background-color: #064e3b;
+    }
+
+    .callout-quote,
+    .callout-from-the-book {
+        background-color: #312e81;
+    }
+}
