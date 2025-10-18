@@ -5,14 +5,14 @@ draft: false
 categories: ["reading"]
 ---
 
-![Book cover](/images/Pasted%20image%2020251017213150.png)
+![Pasted%20image%2020251017213150.png](%20/images/Pasted%20image%2020251017213150.png%20)
 
-So this actor and writer Richard Ayoade wrote a book called The Unfinished Harauld Hughes which is about a writer of books and screenplays and other things. 
+So%20this%20actor%20and%20writer%20Richard%20Ayoade%20wrote%20a%20book%20called%20The%20Unfinished%20Harauld%20Hughes%20which%20is%20about%20a%20writer%20of%20books%20and%20screenplays%20and%20other%20things.%20
 
-And as part of writing that book, Ayoade also wrote and published actual books by his fictional character Harauld Hughes!!! 
+And%20as%20part%20of%20writing%20that%20book,%20Ayoade%20also%20wrote%20and%20published%20actual%20books%20by%20his%20fictional%20character%20Harauld%20Hughes!!!%20
 
-Here's Wallace Shawn explaining what Ayoade did: 
+Here's%20Wallace%20Shawn%20explaining%20what%20Ayoade%20did:%20
 
->_many writers have invented characters who are writers—but do you know any other writer who has not only invented a character who is a writer but who has then gone on to actually write and publish that imaginary writer’s complete works? Richard Ayoade has done that, and if you take out your Kindle and look up Harauld Hughes, Faber will be glad to send you Hughes’s collected plays, poems, prose pieces, and screenplays, all in fact written by Richard Ayoade.
+>_many%20writers%20have%20invented%20characters%20who%20are%20writers—but%20do%20you%20know%20any%20other%20writer%20who%20has%20not%20only%20invented%20a%20character%20who%20is%20a%20writer%20but%20who%20has%20then%20gone%20on%20to%20actually%20write%20and%20publish%20that%20imaginary%20writer’s%20complete%20works?%20Richard%20Ayoade%20has%20done%20that,%20and%20if%20you%20take%20out%20your%20Kindle%20and%20look%20up%20Harauld%20Hughes,%20Faber%20will%20be%20glad%20to%20send%20you%20Hughes’s%20collected%20plays,%20poems,%20prose%20pieces,%20and%20screenplays,%20all%20in%20fact%20written%20by%20Richard%20Ayoade.
 
-[The full interview is worth a read](https://www.mcsweeneys.net/articles/the-process-richard-ayoade-the-unfinished-harauld-hughes-2024).
+[The%20full%20interview%20is%20worth%20a%20read](%20https://www.mcsweeneys.net/articles/the-process-richard-ayoade-the-unfinished-harauld-hughes-2024%20).
