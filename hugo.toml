@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Both Are True'
 theme = 'PaperMod'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   description = "A shelter from the swarm."
   author = "Alex Dobrenko"
@@ -10,6 +15,9 @@ theme = 'PaperMod'
   showReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
+
+[params.assets]
+  disableFingerprinting = true
 
 [[params.socialIcons]]
   name = "email"

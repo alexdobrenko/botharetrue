@@ -5,7 +5,7 @@ draft: false
 categories: ["reading"]
 ---
 
-![Pasted image 20251017213150.png](/images/Pasted image 20251017213150.png)
+![Pasted image 20251017213150.png](/images/Pasted%20image%2020251017213150.png)
 
 Soooo this actor and writer Richard Ayoade wrote a book called The Unfinished Harauld Hughes which is about a writer of books and screenplays and other things. 
 
