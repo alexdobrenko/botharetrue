@@ -7,7 +7,7 @@ categories: ["reading"]
 
 ![Pasted image 20251017213150.png](/images/Pasted image 20251017213150.png)
 
-So this actor and writer Richard Ayoade wrote a book called The Unfinished Harauld Hughes which is about a writer of books and screenplays and other things. 
+Soooo this actor and writer Richard Ayoade wrote a book called The Unfinished Harauld Hughes which is about a writer of books and screenplays and other things. 
 
 And as part of writing that book, Ayoade also wrote and published actual books by his fictional character Harauld Hughes!!! 
 
