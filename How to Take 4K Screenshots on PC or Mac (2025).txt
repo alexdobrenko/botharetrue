@@ -1,0 +1,48 @@
+I found a way to stop taking screenshots
+that look like this but instead look
+like this with perfect 4K quality this
+works in Chrome Firefox and Edge PC
+browsers and after this video you'll
+never use the print screen key again
+First Press F12 and you'll open up the
+developer tools for your browser go to
+the top and click on this icon for
+toggle device emulation now go to this
+new bar that showed up at the top of
+your screen and click on the dimensions
+drop down go to the bottom of this list
+and click edit when the sidebar pops up
+click on add custom device Now set a
+device name for your screenshots moving
+forward I just chose high res then set
+the dimensions to 1920 by 1080. then set
+the device pixel ratio to 4. leave the
+area that says user agent string blank
+but make sure you set the drop down next
+to it to desktop then click add now
+close that sidebar and go back to the
+top bar on your screen and click on the
+dimensions drop down again now at the
+top of this list you'll see the custom
+device output that you just created go
+ahead and click on it now for the part
+that's slightly hidden go and click
+these tiny three dots in the upper right
+corner of the window then click on
+capture screenshot you can save that
+file anywhere you want and there you go
+you have a perfect quality screenshot of
+any web page you can also click on those
+three dots and select capture full size
+screenshot to get the entire web page in
+this quality and now you don't have to
+take multiple screenshots and piece them
+together in paint or photoshop now while
+this method only works for web pages
+there is a way to take 4K screenshots
+and recordings of other things like a
+piece of software so make sure you watch
+this video on screen next and I'll show
+you exactly what you need to do to get
+perfect 4K screenshots and recordings of
+your entire PC
