@@ -1,5 +1,5 @@
 ---
-title: ""Man, its so fun to make these slides.""
+title: '"Man, its so fun to make these slides."'
 date: 2025-10-21
 draft: false
 ---
