@@ -15,6 +15,14 @@ theme = 'PaperMod'
   showReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
+  mainSections = ["posts"]
+
+[params.homeInfoParams]
+  Title = ""
+  Content = ""
+
+[[params.profileMode]]
+  enabled = false
 
 [params.assets]
   disableFingerprinting = true
