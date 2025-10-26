@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tech Notes to Self on Both Are True</title>
+    <link>http://localhost:1313/tech-notes/</link>
+    <description>Recent content in Tech Notes to Self on Both Are True</description>
+    <generator>Hugo -- 0.150.1</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tech-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tech note to self - 4k-screenshot-hack</title>
+      <link>http://localhost:1313/tech-notes/tech-note-to-self---4k-screenshot-hack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/tech-note-to-self---4k-screenshot-hack/</guid>
+      <description>&lt;p&gt;You can take 4K screenshots in Chrome dev tools.&lt;/p&gt;
+&lt;p&gt;F12 → toggle device emulation → add custom device (1920x1080, 4x pixel ratio) → three dots → capture screenshot.&lt;/p&gt;
+&lt;p&gt;Also does full-page screenshots.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=MOuSu0UO7Sc&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Might come in handy when recording screen!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

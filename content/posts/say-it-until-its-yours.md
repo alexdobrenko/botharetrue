@@ -7,9 +7,9 @@ draft: false
 From Tom White's piece [Everything Has Been Said (But Not By You)](https://www.whitenoise.email/p/everything-has-been-said-but-not)
 
 >Because truth doesn’t live on the page.  
-It lives in the speaking.  
-In the wrestling.  
-In the failing and the finding your way back.  
+IIt lives in the speaking.  
+IIn the wrestling.  
+IIn the failing and the finding your way back.  
 >
 >It dies in repetition without revelation,  
 iin articulation without authenticity.

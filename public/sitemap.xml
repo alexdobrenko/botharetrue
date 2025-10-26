@@ -3,15 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-10-18T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/craft/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/say-it-until-its-yours/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/writing/</loc>
+    <lastmod>2025-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/man-its-so-fun-to-make-these-slides./</loc>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/dont-back-out-of-doing-the-thing/</loc>
+    <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/photos-of-a-train-i-really-love/</loc>
-    <lastmod>2025-10-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/reading/</loc>
@@ -24,9 +42,6 @@
     <lastmod>2025-10-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/are-you-inside-the-work-or-outside-the-work/</loc>
-    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/craft/</loc>
     <lastmod>2025-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/creativity/</loc>
@@ -45,9 +60,6 @@
     <lastmod>2025-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/site-i-like-ryan-hemsworth/</loc>
-    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/attention/</loc>
@@ -98,9 +110,6 @@
     <loc>http://localhost:1313/tags/mastery/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/writing/</loc>
-    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/forgiveness-in-progress/</loc>
     <lastmod>2025-09-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -111,5 +120,9 @@
     <lastmod>2025-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tech-notes/tech-note-to-self---4k-screenshot-hack/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tech-notes/</loc>
   </url>
 </urlset>
