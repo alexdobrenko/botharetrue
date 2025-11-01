@@ -1,0 +1,44 @@
+{{- $url := .Destination -}}
+{{- $text := .Text -}}
+{{- $title := .Title -}}
+
+{{- /* Check if it's a YouTube URL */ -}}
+{{- $isYouTube := false -}}
+{{- $videoID := "" -}}
+
+{{- /* Match youtu.be/VIDEO_ID */ -}}
+{{- if findRE "youtu\\.be/([A-Za-z0-9_-]+)" $url -}}
+    {{- $isYouTube = true -}}
+    {{- $matches := findRE "youtu\\.be/([A-Za-z0-9_-]+)" $url -}}
+    {{- if $matches -}}
+        {{- $videoID = replaceRE ".*youtu\\.be/([A-Za-z0-9_-]+).*" "$1" $url -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* Match youtube.com/watch?v=VIDEO_ID */ -}}
+{{- if findRE "youtube\\.com/watch\\?v=([A-Za-z0-9_-]+)" $url -}}
+    {{- $isYouTube = true -}}
+    {{- $videoID = replaceRE ".*[?&]v=([A-Za-z0-9_-]+).*" "$1" $url -}}
+{{- end -}}
+
+{{- /* Match youtube.com/embed/VIDEO_ID */ -}}
+{{- if findRE "youtube\\.com/embed/([A-Za-z0-9_-]+)" $url -}}
+    {{- $isYouTube = true -}}
+    {{- $videoID = replaceRE ".*youtube\\.com/embed/([A-Za-z0-9_-]+).*" "$1" $url -}}
+{{- end -}}
+
+{{- if $isYouTube -}}
+    {{- /* Render YouTube embed */ -}}
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+        <iframe
+            src="https://www.youtube.com/embed/{{ $videoID }}"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+            allowfullscreen
+            title="{{ if $title }}{{ $title }}{{ else }}YouTube video{{ end }}"
+            loading="lazy">
+        </iframe>
+    </div>
+{{- else -}}
+    {{- /* Regular link */ -}}
+    <a href="{{ $url }}"{{ with $title }} title="{{ . }}"{{ end }}{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener"{{ end }}>{{ $text | safeHTML }}</a>
+{{- end -}}

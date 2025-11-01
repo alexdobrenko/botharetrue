@@ -4,7 +4,7 @@ date: 2025-11-01
 draft: false
 ---
 
-https://youtu.be/aoHxqc-DsGQ
+{{< youtube aoHxqc-DsGQ >}}
 
 this is, strangely, a huge deal. 
 
