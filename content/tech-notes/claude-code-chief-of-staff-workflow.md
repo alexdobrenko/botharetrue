@@ -5,7 +5,7 @@ draft: false
 categories: ["reading"]
 ---
 
-# Claude Code Chief of Staff Workflow
+# Chief of Staff Workflow Using Claude Code
 
 ## Part 1: Tutorial
 

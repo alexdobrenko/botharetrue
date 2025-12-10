@@ -4,7 +4,7 @@ date:
 draft: false
 ---
 
-# Claude Code Image Naming Workflow
+# Image Naming Workflow Using Claude Code
 
 ## Part 1: Tutorial
 

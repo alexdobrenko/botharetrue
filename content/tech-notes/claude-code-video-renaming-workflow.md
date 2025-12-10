@@ -4,7 +4,7 @@ date:
 draft: false
 ---
 
-# Claude Code Video Renaming Workflow
+# Video Renaming Workflow Using Claude Code
 
 ## Part 1: Step-by-Step Tutorial
 

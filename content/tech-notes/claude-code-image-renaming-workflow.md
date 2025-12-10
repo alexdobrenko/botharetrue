@@ -5,7 +5,7 @@ draft: false
 categories: ["reading"]
 ---
 
-# Claude Code Image Renaming Workflow
+# Image Renaming Workflow Using Claude Code
 
 ## Part 1: Step-by-Step Tutorial
 
