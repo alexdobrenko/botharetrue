@@ -1,10 +1,9 @@
 ---
-title: 'claude-code-image-renaming-workflow'
-date: 
+title: Image Renaming Workflow Using Claude Code
+date: 2025-12-05
 draft: false
-categories: ["reading"]
+date updated: 2025-12-10 16:09
 ---
-
 # Image Renaming Workflow Using Claude Code
 
 ## Part 1: Step-by-Step Tutorial
@@ -60,3 +59,21 @@ From Alex's Connor LinkedIn posts folder:
 
 ### Time Saved
 What would take 15-20 minutes of manually opening, reading, and renaming files takes about 30 seconds with Claude.
+
+---
+
+## Part 2: Blog Post - "The AI Will Read Your Screenshots So You Don't Have To"
+
+I just did something that felt both incredibly mundane and slightly magical.
+
+I had 13 screenshots of Connor's LinkedIn posts sitting in a folder. You know the ones - those Mac screenshot names that look like someone sneezed on a keyboard: `SCR-20251205-gdoq.png`. I needed to rename them with actual descriptions so I could find them later. The kind of task that makes you question your career choices. Open image. Read it. Think of a name. Type it out. Repeat 12 more times.
+
+Instead, I asked Claude to do it. Just: "review these and rename the photos so it's clearer what each one is about."
+
+And it did. All of them. In seconds. Because Claude can read images. It looked at each screenshot of a LinkedIn post, understood what it was about, and renamed it something useful like `podcast-sarah-cooper-failure-snl-audition.png` instead of `SCR-20251205-gduk.png`.
+
+Here's what's both true: This is a trivial task that saved me maybe 15 minutes. And also, these 15-minute tasks are exactly why you never get to the work that matters. You can dismiss this as "just file organization" or you can recognize it as reclaiming your attention for something better. Both are true.
+
+The deeper thing here isn't about automation or efficiency. It's about noticing where your brain is being wasted. I wasn't going to learn anything from reading those LinkedIn posts for the fifth time while renaming files. I already pulled the insights I needed. This was pure organizational overhead - necessary but not meaningful. The kind of thing that compounds into hours of "where did my day go?"
+
+What gets me is how simple it was. No complex workflow. No API setup. Just ask. The AI equivalent of "hey, could you handle this tedious thing while I go do something that requires an actual human?" Small wins compound. This one just bought me 15 minutes to write instead of rename. I'll take it.

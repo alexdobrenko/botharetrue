@@ -1,9 +1,9 @@
 ---
-title: 'claude-code-video-renaming-workflow'
-date: 
+title: Video Renaming Workflow Using Claude Code
+date: 2025-12-08
 draft: false
+date updated: 2025-12-10 16:09
 ---
-
 # Video Renaming Workflow Using Claude Code
 
 ## Part 1: Step-by-Step Tutorial
@@ -72,3 +72,27 @@ From Stacks + Joules Cohort 11 Graduation Showcase (73 videos):
 
 ### Time Saved
 What would take hours of opening, scrubbing through, and manually renaming videos takes about 15-20 minutes with Claude. For 73 videos. Including the dry run review.
+
+---
+
+## Part 2: Blog Post - "I Made the AI Watch 73 Videos So I Didn't Have To"
+
+I had 73 videos from a graduation event. They were named `1.MP4` through `73.MP4`. Camera defaults. Useless for finding anything later.
+
+"I need to find the video where Devin explains the heat pump" becomes "let me scrub through 73 videos until I recognize the right one." Or worse: give up and just use whatever's easiest to find.
+
+So I asked Claude Code to rename them based on what's actually in them.
+
+Here's the thing - Claude can't watch videos directly. But it can extract frames. So it pulled three screenshots from each video (beginning, middle, end) and analyzed those. It saw graduates presenting projects. It read nametags. It identified HVAC equipment, smart lighting demos, building automation panels. It noticed when someone was explaining versus networking versus doing hands-on work.
+
+73 videos. Each one got a name like `037_graduates-group-hvac-trainer-demonstration.MP4` or `048_graduate-eric-building-automation-panel-demo.MP4`.
+
+The whole thing took maybe 20 minutes. Most of that was Claude doing the actual analysis. I just said yes when it showed me the dry run.
+
+There's something almost absurd about this. The AI watched graduation footage so I could find it later. But also - this is exactly the kind of task that sits undone forever. "I'll organize those videos eventually" means never. The cognitive load of "ugh, 73 videos" is enough to keep them in numbered chaos indefinitely.
+
+What I keep learning with Claude Code: the unlock isn't doing impressive things. It's doing tedious things instantly. The stuff you'd never actually get around to because life is short and renaming 73 videos is not how you want to spend it.
+
+Now I can actually find the video where Devin explains the heat pump. It's `064_graduate-devin-explaining-heat-pump-visitor.MP4`. Took me two seconds to search.
+
+Small wins compound.

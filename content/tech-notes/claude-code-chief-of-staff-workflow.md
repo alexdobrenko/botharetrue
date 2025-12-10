@@ -1,10 +1,9 @@
 ---
-title: 'claude-code-chief-of-staff-workflow'
-date: 
+title: Chief of Staff Workflow Using Claude Code
+date: 2025-12-10
 draft: false
-categories: ["reading"]
+date updated: 2025-12-10 16:09
 ---
-
 # Chief of Staff Workflow Using Claude Code
 
 ## Part 1: Tutorial
@@ -58,3 +57,23 @@ $ARGUMENTS
 5. Next session, it picks up right where we left off
 
 **Bonus:** Drop meeting transcripts into `/Clients/[name]/call-notes/` — Claude summarizes them and updates the brain dump.
+
+---
+
+## Part 2: Blog Post
+
+The thing about AI assistants is they have amnesia.
+
+Every conversation starts from zero. You explain your projects, your clients, what you're working on — and then next time, you do it all again. It's like having a brilliant coworker with a Men in Black memory wipe between every meeting.
+
+Here's what's both true: Claude is incredibly capable AND it forgets everything the moment you close the window.
+
+So I built a workaround. A slash command called `/chief-of-staff` that reads a folder of markdown files before we start talking. My brain dump. My running task list. Notes on what I owe each client and who's waiting on me.
+
+Now when I start a session, Claude already knows. It asks "how'd the Hannah meeting go?" instead of "who's Hannah?" It remembers I've been avoiding the BATCAVE scheduling. It knows the FMLY website is due the 22nd.
+
+The unsexy truth: it's just text files. Markdown documents that Claude reads and updates as we talk. No fancy database, no special app. Just files in a folder.
+
+But that's the thing about good systems — they're usually boring. A folder of notes and a command that reads them. That's it. That's the whole trick.
+
+The magic isn't the technology. It's having a thinking partner who remembers what you're avoiding.

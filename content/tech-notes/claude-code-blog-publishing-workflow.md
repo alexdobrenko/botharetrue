@@ -1,10 +1,9 @@
 ---
-title: 'claude-code-blog-publishing-workflow'
-date: 
+title: Blog Publishing Workflow Using Claude Code
+date: 2025-12-10
 draft: false
-categories: ["reading"]
+date updated: 2025-12-10 16:09
 ---
-
 # Blog Publishing Workflow Using Claude Code
 
 ## Part 1: Tutorial
@@ -45,10 +44,10 @@ That's it. One command.
 
 3. **Converts Obsidian → Hugo syntax:**
    - Strips Obsidian frontmatter, adds Hugo frontmatter
-   - Converts `![image.jpg](/images/image.jpg)` → standard markdown images
+   - Converts `![[image.jpg]]` → standard markdown images
    - Converts Obsidian callouts → HTML
    - Converts standalone YouTube URLs → Hugo shortcodes
-   - Removes wiki-style `links`
+   - Removes wiki-style `[[links]]`
 
 4. **Handles images** — Finds images in my Attachments folder, copies to `/static/images/`
 
@@ -62,6 +61,11 @@ That's it. One command.
 
 Minimal frontmatter needed:
 ```yaml
+---
+title: "Your Post Title"
+date: 2025-12-10
+draft: false
+---
 ```
 
 The script auto-detects categories (e.g., adds `reading` category if post mentions books).
@@ -79,7 +83,7 @@ Two ways:
 The main script calls these for syntax conversion:
 
 - `convert-callouts.py` — Obsidian callouts → HTML
-- `convert-image-syntax.py` — `!image` → `![](/images/image)`
+- `convert-image-syntax.py` — `![[image]]` → `![](/images/image)`
 
 ### Example Run
 
@@ -104,3 +108,25 @@ Publish/update these posts? (y/n) y
 ✅ Deployment successful!
    Live at: https://botharetrue.com
 ```
+
+---
+
+## Part 2: Blog Post
+
+I used to dread publishing.
+
+Write the post — that's the fun part. Then: copy to a new file, fix the frontmatter, convert my Obsidian image syntax, find the actual image files, copy those too, commit, push, wait, check if it worked, fix the thing that broke, push again.
+
+Twenty minutes of friction for a five-minute post. Enough friction that posts would sit in drafts for weeks.
+
+Here's what's both true: publishing should be trivial AND most publishing workflows are needlessly painful.
+
+So I built a script. One command: `publish-to-blog.sh`. It finds new posts in my Obsidian vault, converts the syntax, handles images, commits to git, pushes to GitHub, and waits for Netlify to finish deploying. Then it tells me the site is live.
+
+The whole thing is about 300 lines of bash. Not elegant. Not clever. Just: detect what changed, convert the format, move the files, push the button.
+
+The unsexy truth about productivity systems: they're usually just scripts that do the boring parts automatically. No AI required. No fancy apps. Just "I do this same sequence of steps every time, so I wrote it down in a way the computer understands."
+
+Now I write in Obsidian, run one command, and the post is live. The friction is gone. Which means I actually publish instead of letting drafts accumulate.
+
+The best automation isn't impressive. It's invisible. You forget you ever had to do those steps manually.
