@@ -1,7 +1,8 @@
 ---
-title: 'just ask claude'
-date: 
+title: 'just ask claude (ai-assisted draft)'
+date: 2026-01-10
 draft: false
+hiddenInHomeList: true
 ---
 
 # just ask claude
