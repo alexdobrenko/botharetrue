@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,38 +40,41 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-</head>
-
-<body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+       document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
-
-<header class="header">
+</head>
+<body class="list" id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
@@ -131,159 +134,166 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">BATCAVE Promo
+    <h2 class="entry-hint-parent">switching from explore to exploit
     </h2>
   </header>
   <div class="entry-content">
-    <p>Check out this piece on rituals and members clubs:
-https://shindy.substack.com/p/rituals-members-clubs
+    <p>I hate that terminology but it isn’t wrong.
+Explore mode is when you just wanna rummage around your ideas and everything is great and possible and expansive. Divergence is another term for it. This leads to that which leads to those and so on.
+But eventually one must say ’enough’ and stop. One must converge. Take what is there and do something with it. Package it for the marketplace? Create something worth consuming? Something that has a point?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-18 00:00:00 +0000 UTC'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to switching from explore to exploit" href="http://localhost:1313/posts/switching-from-explore-to-exploit/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">testing your email provider to make sure emails send good
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>How I’m Testing My New Email Provider (Loops) So here’s what I did.
+1. First Stop: Mail-Tester I went to mail-tester.com, grabbed the weird little temporary email address they gave me, added it to my Loops list, and sent my email.
+Score came back great. 9.5/10. Huge win.
+2. Then I Tried My Personal Gmail I added my own personal email to the Loops list because I wanted to see where it actually lands in a real inbox.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-18 00:00:00 +0000 UTC'>November 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to testing your email provider to make sure emails send good" href="http://localhost:1313/posts/testing-your-email-provider-to-make-sure-emails-send-good/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">the first short film from the duplass brothers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> so simple, so good.
 </p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-28 00:00:00 +0000 UTC'>September 28, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to BATCAVE Promo" href="http://localhost:1313/posts/batcave-promo/"></a>
+  <footer class="entry-footer"><span title='2025-11-02 00:00:00 +0000 UTC'>November 2, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to the first short film from the duplass brothers" href="http://localhost:1313/posts/the-first-short-film-from-the-duplass-brothers/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Blend vs Mix
+    <h2 class="entry-hint-parent">blogging for yourself vs blogging for an audience
     </h2>
   </header>
   <div class="entry-content">
-    <p>I just want to give a big shout out to the word ‘blend.’ Coffee is a blend. I just made a blend when i took beans from two different bags and tossed it all into my grinder. That is a blend!
-The word blend is powerful. It is a marketing word.
-Imagine if you were paying for a ‘coffee mix’ - I would not pay top dollar for that.
-Blend though, now blend sounds good.
+    <p>there’s a difference! Because this blog right now is still an infant, and literally I think only three people have ever even been given the link, I am able to be much more sensitive to the shifting experience of writing it as more people become aware of it.
+for example: i shared it with Michael Dean last week (Michael if you’re reading this, which you probably are cuz i’ll probably send it to you, hi!).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-28 00:00:00 +0000 UTC'>September 28, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Blend vs Mix" href="http://localhost:1313/posts/blend-vs-mix/"></a>
+  <footer class="entry-footer"><span title='2025-11-01 00:00:00 +0000 UTC'>November 1, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to blogging for yourself vs blogging for an audience" href="http://localhost:1313/posts/blogging-for-yourself-vs-blogging-for-an-audience/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Don&#39;t Spoil Your Effort by Seeking for Shelter
+    <h2 class="entry-hint-parent">i posted a video on youtube
     </h2>
   </header>
   <div class="entry-content">
-    <p>Love this line so much from “not always so” by Shunryu Suzuki.
-And the line he says a bit earlier: “if you go to the rest room, there is a chance for enlightenment.”
-But when you go to the restroom and seek shelter inside your phone, there is no chance for enlightenment. Of course there is, still, because the person who is looking in their phone is also enlightened but he does not know it to be so.
+    <p> this is, strangely, a huge deal.
+or not strangely, but just interestingly given how common of a thing that is. everyone is posting onto youtube all the time.
+and yet for me it felt impossible. until now (dramatic)
+i decided to run an experiment this morning at about 530am - could i record and publish a video in 30 min.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-28 00:00:00 +0000 UTC'>September 28, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Don&#39;t Spoil Your Effort by Seeking for Shelter" href="http://localhost:1313/posts/dont-spoil-your-effort-by-seeking-shelter/"></a>
+  <footer class="entry-footer"><span title='2025-11-01 00:00:00 +0000 UTC'>November 1, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to i posted a video on youtube" href="http://localhost:1313/posts/i-posted-a-video-on-youtube/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Idea: A Website for BAT Workshops
+    <h2 class="entry-hint-parent">ramblings for community?
     </h2>
   </header>
   <div class="entry-content">
-    <p>spec:
-ADD
-ideas:
-have a chat like this </p>
+    <p>Just read this awesome short essay Ramblings from Obsidian CEO Steph Agno in which he (until v recently I assumed Steph was a woman) shares how at their work they have individual channels for each person called ramblings where each person can just write out whatever stuff they’re thinking about and working on:
+A tip for remote teams of 2-10 people. Create a personal “ramblings” channel for each teammate in your team’s chat app of choice.
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-28 00:00:00 +0000 UTC'>September 28, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Idea: A Website for BAT Workshops" href="http://localhost:1313/posts/idea-website-for-bat-workshops/"></a>
+  <footer class="entry-footer"><span title='2025-11-01 00:00:00 +0000 UTC'>November 1, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to ramblings for community?" href="http://localhost:1313/posts/ramblings-for-community/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">People Who Seem Awesome That I&#39;d Love to Work With
+    <h2 class="entry-hint-parent">rules and regulations for this blog
     </h2>
   </header>
   <div class="entry-content">
-    <p>https://sundogcowboy.com/ - Jess Hererra who designed Cody Cook-Parrott’s website which seems awesome
+    <p>God I hope I can stick to these.
+The first that just came to mind is: no analytics. No knowing which posts do “best.”
+But isn’t that…useful? For people who come here?
+damn it I’m already folding like a lawn chair.
+well, that’s not really a problem right now - no one reads this, and I sort of want to keep it that way.
+well, A PART of me wants to keep it that way while another part of course wants people to read this and it grow.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-01 00:00:00 +0000 UTC'>November 1, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to rules and regulations for this blog" href="http://localhost:1313/posts/rules-and-regulations-for-this-blog/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">prompts
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I love collecting prompts and just found a bunch of real weird ones in a book titled Learning for people who prefer not to be taught
+Some prompts:
+Just add hot water and stir Internship Lottery Performative Artists’ Talks </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-29 00:00:00 +0000 UTC'>October 29, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to prompts" href="http://localhost:1313/posts/prompts/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">&#34;Everything feels 85% there. Which is fine. That&#39;s usually the sweet spot for me&#34;
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ChatGPT wrote that as part of a summary of my Create a Loops email sequence experiment.
+And i like it. I like that idea a lot.
+85% is good enough, at least for this blog. Maybe for Substack too?
 </p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-28 00:00:00 +0000 UTC'>September 28, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to People Who Seem Awesome That I&#39;d Love to Work With" href="http://localhost:1313/posts/people-who-seem-awesome/"></a>
+  <footer class="entry-footer"><span title='2025-10-26 00:00:00 +0000 UTC'>October 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to &#34;Everything feels 85% there. Which is fine. That&#39;s usually the sweet spot for me&#34;" href="http://localhost:1313/posts/everything-feels-85-there.-which-is-fine.-thats-usually-the-sweet-spot-for-me/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">The Internet Is a Temper Trap Hell Hole
+    <h2 class="entry-hint-parent">&#34;Everything feels 85% there. Which is fine. That’s usually the sweet spot for me&#34;
     </h2>
   </header>
   <div class="entry-content">
-    <p>I wrote this at Sept 28 at 4:04am
-I don’t know how else to put it. Today, this morning (Sept 28), just now, at 4:04am, I cut my journaling into my little notebook with my little pencil short - I cut it short so I could get on and write into my big computer with my big keyboard the big idea I had about the word blend.
-But when I got onto the computer, this vegas strip with its bright lights and flashing distractions all hand crafted and premium made for me truly, exactly as I left it last night, I forgot all about blend.
-...</p>
+    <p>ChatGPT wrote that as part of a summary of my Create a Loops email sequence experiment.
+And i like it. I like that idea a lot.
+85% is good enough, at least for this blog. Maybe for Substack too?
+</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-28 00:00:00 +0000 UTC'>September 28, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to The Internet Is a Temper Trap Hell Hole" href="http://localhost:1313/posts/the-internet-is-a-temper-trap-hell-hole/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">How Do I Define Mastery for Myself?
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>When thinking about mastery, for myself, there seem to be two frames:
-How do I define what it means to strive for learning, for mastery? How well am I following that rubric / framework for any given essay? I think I need to figure out #1 first, or at least have some sense of it, in order to give it a whirl. But I also need to not be too prescriptive. Who knows what’ll happen when I write.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-20 00:00:00 +0000 UTC'>September 20, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to How Do I Define Mastery for Myself?" href="http://localhost:1313/posts/how-do-i-define-mastery-for-myself/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Forgiveness (In Progress)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I’ve been thinking a lot about it, this idea, forgiveness. That might be all I have on it right now, which raises a meta question for the blog - is that enough to publish?
-To which I’d ask myself - what’s the point of the blog? Is it mostly for others? Or mostly for me?
-And then I’d of course realize, as I am, that the same question can be asked about forgiveness itself.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-17 00:00:00 +0000 UTC'>September 17, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Forgiveness (In Progress)" href="http://localhost:1313/posts/forgiveness-in-progress/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">More on Ursula K. Le Guin
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Reading more of her this morning and I don’t want to stop. There is a joy in her words, an aliveness, that is contagious. I feel as though she does not want to stop writing, and thus, perhaps, I don’t want to stop reading.
-The topics vary wildly from why armed forces wear uniforms to the paucity of ‘growth’ as the prevailing metaphor for our entire way of being and doing. No matter the details though, I want to keep reading.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-15 00:00:00 +0000 UTC'>September 15, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to More on Ursula K. Le Guin" href="http://localhost:1313/posts/more-on-ursula-k-le-guin/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Ursula K. Le Guin Appreciation Post
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I’m reading her book right now, No Time To Spare, and am filled with this familiar feeling of how it feels when you’re reading someone and just feel…seen. Understood, yes, but more than that, like your own way of understanding itself is being reflected back to you.
-Or, in other words, she’s just smart and I like how her brain moves ideas around, how it thinks and how she shares that thinking with the world.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-09-14 00:00:00 +0000 UTC'>September 14, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Ursula K. Le Guin Appreciation Post" href="http://localhost:1313/posts/ursula-k-le-guin-appreciation/"></a>
+  <footer class="entry-footer"><span title='2025-10-26 00:00:00 +0000 UTC'>October 26, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to &#34;Everything feels 85% there. Which is fine. That’s usually the sweet spot for me&#34;" href="http://localhost:1313/posts/everything-feels-85-there.-which-is-fine.-thats-usually-the-sweet-spot-for-me/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="http://localhost:1313/posts/">
       «&nbsp;Prev&nbsp;
     </a>
+    <a class="next" href="http://localhost:1313/posts/page/3/">Next&nbsp;&nbsp;»
+    </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Both Are True</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
 
     <span>
         Powered by
@@ -295,7 +305,10 @@ Or, in other words, she’s just smart and I like how her brain moves ideas arou
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
 <div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
   <form class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
@@ -447,9 +460,14 @@ for (var i = 0; i < formContainers.length; i++) {
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -490,11 +508,12 @@ for (var i = 0; i < formContainers.length; i++) {
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

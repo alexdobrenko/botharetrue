@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head>
 	<meta name="generator" content="Hugo 0.150.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
@@ -41,38 +41,41 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-</head>
-
-<body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+       document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
-
-<header class="header">
+</head>
+<body class="list" id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
@@ -127,177 +130,168 @@
 
 <article class="first-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">say it until it&#39;s yours
+    <h2 class="entry-hint-parent">who is lying?
     </h2>
   </header>
   <div class="entry-content">
     
-    <p>From Tom White&rsquo;s piece <a href="https://www.whitenoise.email/p/everything-has-been-said-but-not">Everything Has Been Said (But Not By You)</a></p>
-<blockquote>
-<p>Because truth doesn&rsquo;t live on the page.
-It lives in the speaking.
-In the wrestling.
-In the failing and the finding your way back.</p>
-<p>It dies in repetition without revelation,
-in articulation without authenticity.</p>
-<p>Anyone can carry a tune.
-Only you can give it meaning.</p>
-<p>So say it again.
-Say it like you mean it.
-Say it until it&rsquo;s yours.</p></blockquote>
+    <p>I just came across this weird fun little mind puzzler:</p>
+<p><img alt="Pasted image 20260114041903.png" loading="lazy" src="/images/Pasted%20image%2020260114041903.png"></p>
+<p>Besides the many things I love about this website, made by coder / hacker / weird guy Nolan Royalty (see the footnote thing he does), I&rsquo;m also just very drawn to trying to solve this. So before I look for the answer, I&rsquo;m gonna try to solve it myself.</p>
+<p>If you wanna try, don&rsquo;t read below.</p>
+<h2 id="my-answer">my answer</h2>
+<p>I think the move is to ask Bob if Alice is lying. He&rsquo;ll tell you the truth 80% of the time. You can then ask Alice if Bob is lying or not and she&rsquo;ll tell you the truth 80% of the time.</p>
+<p>I&rsquo;m too lazy to prove this with math, but I feel like her revealing whether or not Bob is lying will increase the total odds above 80%?</p>
+<h2 id="the-real-answer">the real answer</h2>
+<p>Ok, I&rsquo;m gonna scroll to the real answer now&hellip;</p>
+<p>FUCK I WAS WAY WRONG!!!!</p>
+<p>The answer is that it&rsquo;s the same 80%!</p>
+<p>I think this means I need to apply to the Recurse Center&rsquo;s coding retreat which it describes as a writer&rsquo;s retreat for programmers.</p>
+<p>Note to self: apply, but don&rsquo;t lie.</p>
 
   </div>
-  <footer class="entry-footer"><span title='2025-10-24 00:00:00 +0000 UTC'>October 24, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to say it until it&#39;s yours" href="http://localhost:1313/posts/say-it-until-its-yours/"></a>
+  <footer class="entry-footer"><span title='2026-01-14 00:00:00 +0000 UTC'>January 14, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to who is lying?" href="http://localhost:1313/posts/who-is-lying/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">&#34;Man, its so fun to make these slides.&#34;
+    <h2 class="entry-hint-parent">hi paul
     </h2>
   </header>
   <div class="entry-content">
     
-    <p>I wrote that recently in a little note about prepping for a workshop.
-I love seeing past me being so giddy about something. About enjoying the process of creating slides for my presentations.
-And it’s true - I remember the feeling - it’s like this different form of basically writing where I’m creating something and using the medium’s tools to make it as funny and good and weird as I can.
+    <p>this is me alex!
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-11 00:00:00 +0000 UTC'>January 11, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to hi paul" href="http://localhost:1313/posts/hi-paul/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">i gotta write my own stuff
+    </h2>
+  </header>
+  <div class="entry-content">
+    
+    <p>I keep trying to take shortcuts - that’s one of the main things AI can help with, after all. And one place I keep trying and failing is writing.
+Like with this essay. I tried by first doing a voice note and having it turn the voice note into an essay and I just…didn’t like it. It didn’t feel like me, even if the prompt I gave was “sound like me.”
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-21 00:00:00 +0000 UTC'>October 21, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to &#34;Man, its so fun to make these slides.&#34;" href="http://localhost:1313/posts/man-its-so-fun-to-make-these-slides./"></a>
+  <footer class="entry-footer"><span title='2026-01-10 00:00:00 +0000 UTC'>January 10, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to i gotta write my own stuff" href="http://localhost:1313/posts/i-gotta-write-my-own-stuff/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">don&#39;t back out of doing the thing
+    <h2 class="entry-hint-parent">just ask claude
     </h2>
   </header>
   <div class="entry-content">
     
-    <p>Almost every day that there’s a BATWRITE, I think about how I can back out of it.
-I’ll just say I’m too busy. Or I’ll tell people I don’t feel good. I can’t do it, I just can’t.
-And then, I do. I’m in one right now, as I write this, and it’s going great. They always do.
-So what’s up with the fear? Is it just the normal stagefright that I feel before doing basically anything? Like how before going to hang out with my friends I’ll think, ‘ugh I don’t want to do this’ even though I very much do?
+    <p>So I just got off a call with someone interested in learning all the claude code stuff.
+It was fun and cool and i muttered a lot, laughed too loud, and was generally anxious about sounding smart or making myself look like anything other than an idiot. Healthy stuff!
+But, and, yet, the one thing i kept saying as an answer to this kind friend’s questions was simply this:
+just ask claude Not sure how to install something on github? Just ask claude.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-21 00:00:00 +0000 UTC'>October 21, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to don&#39;t back out of doing the thing" href="http://localhost:1313/posts/dont-back-out-of-doing-the-thing/"></a>
+  <footer class="entry-footer"><span title='2026-01-10 00:00:00 +0000 UTC'>January 10, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to just ask claude" href="http://localhost:1313/posts/asking-claude/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">photos of a train i really love
+    <h2 class="entry-hint-parent">hi brian
     </h2>
   </header>
   <div class="entry-content">
     
-    <p>Source: Book : SL夢幻 / La Scene de la Locomotive a Vapeur
-Photo : 廣田　尚敬 / Naotaka Hirota (shared by: this isn’t happiness) </p>
+    <p>lets see if this works!
+</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-18 00:00:00 +0000 UTC'>October 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to photos of a train i really love" href="http://localhost:1313/posts/photos-of-a-train-i-really-love/"></a>
+  <footer class="entry-footer"><span title='2026-01-08 00:00:00 +0000 UTC'>January 8, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to hi brian" href="http://localhost:1313/posts/hi-brian/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">positioning
+    <h2 class="entry-hint-parent">i made something to help me actually finish projects. then i had a meltdown trying to sell it. now it&#39;s free.
     </h2>
   </header>
   <div class="entry-content">
     
-    <p>I’m reading this book - a classic in the marketing world, apparently, called Positioning. Here’s a lil bit from the intro:
-from the book Positioning has changed the way the advertising game is being played today. “We’re the third largest-selling coffee in America,” say the Sanka radio commercials.
-The third largest? Whatever happened to those good old advertising words like “first” and “best” and “finest”?
-Well, the good old advertising days are gone forever and so are the words. Today you find comparatives, not superlatives.
+    <p>ok so here’s what happened.
+I’ve been vibe coding for like a year. I have a captioning tool that’s 70% done. a game. a blog system. all of them “almost there.” none of them shipped.
+so I made myself a little system. one project at a time. everything else is dormant. write it down. actually write it down. and it worked. I shipped a zine in one day that had been sitting untouched for weeks.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-17 00:00:00 +0000 UTC'>October 17, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to positioning" href="http://localhost:1313/posts/positioning/"></a>
+  <footer class="entry-footer"><span title='2026-01-04 00:00:00 +0000 UTC'>January 4, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to i made something to help me actually finish projects. then i had a meltdown trying to sell it. now it&#39;s free." href="http://localhost:1313/posts/i-made-something-then-had-a-meltdown-now-its-free/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">true commitment to the bit
+    <h2 class="entry-hint-parent">what is an editor anyways
+    </h2>
+  </header>
+  <div class="entry-content">
+    
+    <p>asking myself this as I read about a man named Lish.
+Gordon Lish.
+Editor of Raymond Carver. Friend of Don Delillio.
+I learned about him as a quick aside mentioned here in this YT video on White Noise which sent me googling and found me here at this ’expose’ in the nytimes in 1998 about how Lish edited Carver’s early works quite a lot, it seemed, and perhaps enough to say that he was the guy who wrote them?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-09 00:00:00 +0000 UTC'>December 9, 2025</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to what is an editor anyways" href="http://localhost:1313/posts/what-is-an-editor-anyways/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">&#34;chatgpt said...&#34;
+    </h2>
+  </header>
+  <div class="entry-content">
+    
+    <p>I just came up with this in my last post - testing your email provider to make sure emails send good and I gotta say, i like it. Basically its a way of adding stuff that GPT said without having to rewrite it in my voice or have it be that weird amalgamation between the two. Feels like a big unlock honestly.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-18 00:00:00 +0000 UTC'>November 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to &#34;chatgpt said...&#34;" href="http://localhost:1313/posts/chatgpt-said.../"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">a feeling and a realization (unrelated, but maybe not?)
     </h2>
   </header>
   <div class="entry-content">
     
     <p>
-Soooo this actor and writer Richard Ayoade wrote a book called The Unfinished Harauld Hughes which is about a writer of books and screenplays and other things.
-And as part of writing that book, Ayoade also wrote and published actual books by his fictional character Harauld Hughes!!!
-Here’s Wallace Shawn explaining what Ayoade did:
-_many writers have invented characters who are writers—but do you know any other writer who has not only invented a character who is a writer but who has then gone on to actually write and publish that imaginary writer’s complete works? Richard Ayoade has done that, and if you take out your Kindle and look up Harauld Hughes, Faber will be glad to send you Hughes’s collected plays, poems, prose pieces, and screenplays, all in fact written by Richard Ayoade.
+the feeling The feeling was stepping out of my back office, hearing a baby wailing, and realizing that that baby was not our baby — it was a neighbor’s baby. That someone else was dealing with this bullshit.
+Not because I want other people to deal with it, but simply because I don’t want to deal with it.
+And even that’s not true. It’s more that I’m just glad to be in a world where I’m not the only one who feels that.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-17 00:00:00 +0000 UTC'>October 17, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to true commitment to the bit" href="http://localhost:1313/posts/true-commitment-to-the-bit/"></a>
+  <footer class="entry-footer"><span title='2025-11-18 00:00:00 +0000 UTC'>November 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to a feeling and a realization (unrelated, but maybe not?)" href="http://localhost:1313/posts/a-feeling-and-a-realization-unrelated-but-maybe-not/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Are You Inside the Work or Outside the Work?
+    <h2 class="entry-hint-parent">switching from explore to exploit
     </h2>
   </header>
   <div class="entry-content">
     
-    <p>Are you inside the work or outside the work?
-It’s basically another way of talking about status and mastery, but I think it’s a nice shortcut. Where are you? Are you in it—actually doing the thing—or are you outside, staring at the finished product, obsessing over how other people are going to receive it?
-My new theory is this: the only real home is inside. That’s the only place you can actually live.
+    <p>I hate that terminology but it isn’t wrong.
+Explore mode is when you just wanna rummage around your ideas and everything is great and possible and expansive. Divergence is another term for it. This leads to that which leads to those and so on.
+But eventually one must say ’enough’ and stop. One must converge. Take what is there and do something with it. Package it for the marketplace? Create something worth consuming? Something that has a point?
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-10-03 00:00:00 +0000 UTC'>October 3, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Are You Inside the Work or Outside the Work?" href="http://localhost:1313/posts/are-you-inside-the-work-or-outside-the-work/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Inspirations
-    </h2>
-  </header>
-  <div class="entry-content">
-    
-    <p>As I venture forth into this new wilderness, I find myself returning again and again to influences and inspirations.
-Specifically, I want to write them down, for myself, and share them, for y’all. It’s way too easy to forget about them in the maelstrom of the day, the hubbub of the night.
-So, in no particular order, here are some people whose work inspires me and to whom I look when thinking about this next chapter:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-03 00:00:00 +0000 UTC'>October 3, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Inspirations" href="http://localhost:1313/posts/inspirations/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Links
-    </h2>
-  </header>
-  <div class="entry-content">
-    
-    <p>Inspired by this I am starting a links page.
-What will I put here is to be determined of course.
-Update (09-20-25): I need multiple link pages. One is probably best for self-promo and BAT-promo.
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-03 00:00:00 +0000 UTC'>October 3, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Links" href="http://localhost:1313/posts/links/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Site I Like: Ryan Hemsworth (Musician)
-    </h2>
-  </header>
-  <div class="entry-content">
-    
-    <p>https://www.ryanhemsworth.com/
-I mean come on.
-Also this ‘submit a drawing thing’
-(Note: Original had images that couldn’t be transferred - check out the site itself!)
-Here’s the one I did:
-(Drawing reference in original)
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-03 00:00:00 +0000 UTC'>October 3, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to Site I Like: Ryan Hemsworth (Musician)" href="http://localhost:1313/posts/site-i-like-ryan-hemsworth/"></a>
+  <footer class="entry-footer"><span title='2025-11-18 00:00:00 +0000 UTC'>November 18, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to switching from explore to exploit" href="http://localhost:1313/posts/switching-from-explore-to-exploit/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
@@ -308,7 +302,7 @@ Here’s the one I did:
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Both Are True</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
 
     <span>
         Powered by
@@ -320,7 +314,10 @@ Here’s the one I did:
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
 <div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
   <form class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
@@ -472,9 +469,14 @@ for (var i = 0; i < formContainers.length; i++) {
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -515,11 +517,12 @@ for (var i = 0; i < formContainers.length; i++) {
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

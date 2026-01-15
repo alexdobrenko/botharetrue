@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Building on Both Are True</title>
+    <link>http://localhost:1313/categories/building/</link>
+    <description>Recent content in Building on Both Are True</description>
+    <generator>Hugo -- 0.150.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/building/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>i made something to help me actually finish projects. then i had a meltdown trying to sell it. now it&#39;s free.</title>
+      <link>http://localhost:1313/posts/i-made-something-then-had-a-meltdown-now-its-free/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/i-made-something-then-had-a-meltdown-now-its-free/</guid>
+      <description>&lt;p&gt;ok so here&amp;rsquo;s what happened.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been vibe coding for like a year. I have a captioning tool that&amp;rsquo;s 70% done. a game. a blog system. all of them &amp;ldquo;almost there.&amp;rdquo; none of them shipped.&lt;/p&gt;
+&lt;p&gt;so I made myself a little system. one project at a time. everything else is dormant. write it down. actually write it down. and it worked. I shipped a zine in one day that had been sitting untouched for weeks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

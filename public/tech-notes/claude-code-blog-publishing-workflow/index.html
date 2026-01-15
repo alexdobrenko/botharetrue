@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Blog Publishing Workflow Using Claude Code | Both Are True</title>
+<meta name="keywords" content="">
+<meta name="description" content="Blog Publishing Workflow Using Claude Code
+Part 1: Tutorial
+The setup: I write in Obsidian. My blog runs on Hugo with the PaperMod theme, hosted on Netlify. I needed a way to go from markdown file → live on botharetrue.com with one command.
+The solution: A bash script that syncs from my vault, converts Obsidian syntax to Hugo, handles images, commits to git, and waits for Netlify deployment.
+Folder Structure
+Source (Obsidian vault):">
+<meta name="author" content="Alex Dobrenko">
+<link rel="canonical" href="http://localhost:1313/tech-notes/claude-code-blog-publishing-workflow/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tech-notes/claude-code-blog-publishing-workflow/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Essays">
+                    <span>Essays</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/evergreen/" title="Evergreen">
+                    <span>Evergreen</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/reading/" title="Reading">
+                    <span>Reading</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Blog Publishing Workflow Using Claude Code
+    </h1>
+    <div class="post-meta"><span title='2025-12-10 00:00:00 +0000 UTC'>December 10, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span>
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#blog-publishing-workflow-using-claude-code" aria-label="Blog Publishing Workflow Using Claude Code">Blog Publishing Workflow Using Claude Code</a><ul>
+                        
+                <li>
+                    <a href="#part-1-tutorial" aria-label="Part 1: Tutorial">Part 1: Tutorial</a><ul>
+                        
+                <li>
+                    <a href="#folder-structure" aria-label="Folder Structure">Folder Structure</a></li>
+                <li>
+                    <a href="#the-command" aria-label="The Command">The Command</a></li>
+                <li>
+                    <a href="#what-the-script-does" aria-label="What the Script Does">What the Script Does</a></li>
+                <li>
+                    <a href="#frontmatter-requirements" aria-label="Frontmatter Requirements">Frontmatter Requirements</a></li>
+                <li>
+                    <a href="#hiding-posts-from-main-feed" aria-label="Hiding Posts from Main Feed">Hiding Posts from Main Feed</a></li>
+                <li>
+                    <a href="#helper-scripts" aria-label="Helper Scripts">Helper Scripts</a></li>
+                <li>
+                    <a href="#example-run" aria-label="Example Run">Example Run</a></li></ul>
+                </li>
+                <li>
+                    <a href="#part-2-blog-post" aria-label="Part 2: Blog Post">Part 2: Blog Post</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="blog-publishing-workflow-using-claude-code">Blog Publishing Workflow Using Claude Code<a hidden class="anchor" aria-hidden="true" href="#blog-publishing-workflow-using-claude-code">#</a></h1>
+<h2 id="part-1-tutorial">Part 1: Tutorial<a hidden class="anchor" aria-hidden="true" href="#part-1-tutorial">#</a></h2>
+<p><strong>The setup:</strong> I write in Obsidian. My blog runs on Hugo with the PaperMod theme, hosted on Netlify. I needed a way to go from markdown file → live on botharetrue.com with one command.</p>
+<p><strong>The solution:</strong> A bash script that syncs from my vault, converts Obsidian syntax to Hugo, handles images, commits to git, and waits for Netlify deployment.</p>
+<h3 id="folder-structure">Folder Structure<a hidden class="anchor" aria-hidden="true" href="#folder-structure">#</a></h3>
+<p><strong>Source (Obsidian vault):</strong></p>
+<pre tabindex="0"><code>/Documents/VAULTS/the work (public?)/
+├── ready to publish/     # Main posts go here
+└── tech-notes/           # Tech tutorials (hidden from main feed)
+</code></pre><p><strong>Destination (Hugo blog):</strong></p>
+<pre tabindex="0"><code>/botharetrue-blog/content/
+├── posts/                # Shows on homepage
+└── tech-notes/           # Doesn&#39;t show on homepage (separate section)
+</code></pre><h3 id="the-command">The Command<a hidden class="anchor" aria-hidden="true" href="#the-command">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/HQ-Clean/Dev/publish-to-blog.sh
+</span></span></code></pre></div><p>That&rsquo;s it. One command.</p>
+<h3 id="what-the-script-does">What the Script Does<a hidden class="anchor" aria-hidden="true" href="#what-the-script-does">#</a></h3>
+<ol>
+<li>
+<p><strong>Finds new/updated files</strong> — Checks both <code>ready to publish/</code> and <code>tech-notes/</code> for markdown files modified in the last 7 days</p>
+</li>
+<li>
+<p><strong>Routes to correct destination</strong> — Files from <code>tech-notes/</code> go to <code>/content/tech-notes/</code>, everything else goes to <code>/content/posts/</code></p>
+</li>
+<li>
+<p><strong>Converts Obsidian → Hugo syntax:</strong></p>
+<ul>
+<li>Strips Obsidian frontmatter, adds Hugo frontmatter</li>
+<li>Converts <code>![[image.jpg]]</code> → standard markdown images</li>
+<li>Converts Obsidian callouts → HTML</li>
+<li>Converts standalone YouTube URLs → Hugo shortcodes</li>
+<li>Removes wiki-style <code>[[links]]</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Handles images</strong> — Finds images in my Attachments folder, copies to <code>/static/images/</code></p>
+</li>
+<li>
+<p><strong>Validates YAML</strong> — Catches frontmatter errors before they break the build</p>
+</li>
+<li>
+<p><strong>Git commit + push</strong> — Auto-commits with a list of published posts</p>
+</li>
+<li>
+<p><strong>Waits for Netlify</strong> — Polls deployment status until it&rsquo;s live (or fails)</p>
+</li>
+</ol>
+<h3 id="frontmatter-requirements">Frontmatter Requirements<a hidden class="anchor" aria-hidden="true" href="#frontmatter-requirements">#</a></h3>
+<p>Minimal frontmatter needed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Your Post Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-12-10</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>The script auto-detects categories (e.g., adds <code>reading</code> category if post mentions books).</p>
+<h3 id="hiding-posts-from-main-feed">Hiding Posts from Main Feed<a hidden class="anchor" aria-hidden="true" href="#hiding-posts-from-main-feed">#</a></h3>
+<p>Two ways:</p>
+<ol>
+<li>
+<p><strong>Put in <code>tech-notes/</code></strong> — The <code>hugo.toml</code> has <code>mainSections = [&quot;posts&quot;]</code>, so only <code>/content/posts/</code> shows on the homepage</p>
+</li>
+<li>
+<p><strong>Add frontmatter flag</strong> — Any post with <code>hiddenInHomeList: true</code> gets filtered out (custom logic in <code>layouts/index.html</code>)</p>
+</li>
+</ol>
+<h3 id="helper-scripts">Helper Scripts<a hidden class="anchor" aria-hidden="true" href="#helper-scripts">#</a></h3>
+<p>The main script calls these for syntax conversion:</p>
+<ul>
+<li><code>convert-callouts.py</code> — Obsidian callouts → HTML</li>
+<li><code>convert-image-syntax.py</code> — <code>![[image]]</code> → <code>![](/images/image)</code></li>
+</ul>
+<h3 id="example-run">Example Run<a hidden class="anchor" aria-hidden="true" href="#example-run">#</a></h3>
+<pre tabindex="0"><code>$ ~/HQ-Clean/Dev/publish-to-blog.sh
+
+🔍 Checking for new or updated posts...
+📝 Found files to publish:
+   ✨ claude-code-chief-of-staff-workflow (new)
+   🔄 my-existing-post (updated)
+
+Publish/update these posts? (y/n) y
+
+📄 Processing: claude-code-chief-of-staff-workflow
+   ✅ Published: claude-code-chief-of-staff-workflow.md
+
+📦 Committing to git...
+🚀 Pushing to GitHub...
+⏳ Waiting for Netlify deployment...
+   Building... (5/60)
+   Building... (10/60)
+✅ Deployment successful!
+   Live at: https://botharetrue.com
+</code></pre><hr>
+<h2 id="part-2-blog-post">Part 2: Blog Post<a hidden class="anchor" aria-hidden="true" href="#part-2-blog-post">#</a></h2>
+<p>I used to dread publishing.</p>
+<p>Write the post — that&rsquo;s the fun part. Then: copy to a new file, fix the frontmatter, convert my Obsidian image syntax, find the actual image files, copy those too, commit, push, wait, check if it worked, fix the thing that broke, push again.</p>
+<p>Twenty minutes of friction for a five-minute post. Enough friction that posts would sit in drafts for weeks.</p>
+<p>Here&rsquo;s what&rsquo;s both true: publishing should be trivial AND most publishing workflows are needlessly painful.</p>
+<p>So I built a script. One command: <code>publish-to-blog.sh</code>. It finds new posts in my Obsidian vault, converts the syntax, handles images, commits to git, pushes to GitHub, and waits for Netlify to finish deploying. Then it tells me the site is live.</p>
+<p>The whole thing is about 300 lines of bash. Not elegant. Not clever. Just: detect what changed, convert the format, move the files, push the button.</p>
+<p>The unsexy truth about productivity systems: they&rsquo;re usually just scripts that do the boring parts automatically. No AI required. No fancy apps. Just &ldquo;I do this same sequence of steps every time, so I wrote it down in a way the computer understands.&rdquo;</p>
+<p>Now I write in Obsidian, run one command, and the post is live. The friction is gone. Which means I actually publish instead of letting drafts accumulate.</p>
+<p>The best automation isn&rsquo;t impressive. It&rsquo;s invisible. You forget you ever had to do those steps manually.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+<div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
+  <form class="newsletter-form"
+    action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
+    method="POST"
+    style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%;">
+    <input class="newsletter-form-input"
+      name="newsletter-form-input"
+      type="email"
+      placeholder="you@example.com"
+      required
+      style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px; margin: 0px 10px 0px 0px; width: 100%; max-width: 300px; min-width: 100px; background: rgb(255, 255, 255); border: 1px solid rgb(209, 213, 219); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; padding: 8px 12px;">
+    <button
+      type="submit"
+      class="newsletter-form-button"
+      style="background: rgb(233, 127, 0); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: flex; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">
+      Sign up to get my dumb weird emails
+    </button>
+    <button
+      type="button"
+      class="newsletter-loading-button"
+      style="background: rgb(233, 127, 0); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: none; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">
+      Please wait...
+    </button>
+  </form>
+  <div class="newsletter-success" style="display: none; align-items: center; justify-content: center; width: 100%;">
+    <p class="newsletter-success-message" style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px;">
+      Well, color me gobsmacked. You did it. Get ready for some emails.
+    </p>
+  </div>
+  <div class="newsletter-error" style="display: none; align-items: center; justify-content: center; width: 100%;">
+    <p class="newsletter-error-message" style="font-family: Inter, sans-serif; color: rgb(185, 28, 28); font-size: 14px;">
+      Oops! Something went wrong, please try again
+    </p>
+  </div>
+  <button
+    class='newsletter-back-button'
+    type='button'
+    style='color:#6b7280;font: 14px, Inter, sans-serif;margin:10px auto;text-align:center;display:none;background:transparent;border:none;cursor:pointer'
+    onmouseout='this.style.textDecoration="none"'
+    onmouseover='this.style.textDecoration="underline"'>
+    &larr; Back
+  </button>
+</div>
+
+<script>
+function submitHandler(event) {
+  event.preventDefault();
+  var container = event.target.parentNode;
+  var form = container.querySelector(".newsletter-form");
+  var formInput = container.querySelector(".newsletter-form-input");
+  var success = container.querySelector(".newsletter-success");
+  var errorContainer = container.querySelector(".newsletter-error");
+  var errorMessage = container.querySelector(".newsletter-error-message");
+  var backButton = container.querySelector(".newsletter-back-button");
+  var submitButton = container.querySelector(".newsletter-form-button");
+  var loadingButton = container.querySelector(".newsletter-loading-button");
+
+
+  const rateLimit = () => {
+    errorContainer.style.display = "flex";
+    errorMessage.innerText = "Too many signups, please try again in a little while";
+    submitButton.style.display = "none";
+    formInput.style.display = "none";
+    backButton.style.display = "block";
+  }
+
+  var time = new Date();
+  var timestamp = time.valueOf();
+  var previousTimestamp = localStorage.getItem("loops-form-timestamp");
+
+  if (previousTimestamp && Number(previousTimestamp) + 60000 > timestamp) {
+    rateLimit();
+    return;
+  }
+  localStorage.setItem("loops-form-timestamp", timestamp);
+
+  submitButton.style.display = "none";
+  loadingButton.style.display = "flex";
+
+  var formBody = "userGroup=&mailingLists=&email="
+    + encodeURIComponent(formInput.value);
+
+  fetch(event.target.action, {
+    method: "POST",
+    body: formBody,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+  })
+    .then((res) => [res.ok, res.json(), res])
+    .then(([ok, dataPromise, res]) => {
+      if (ok) {
+        success.style.display = "flex";
+        form.reset();
+      } else {
+        dataPromise.then(data => {
+          errorContainer.style.display = "flex";
+          errorMessage.innerText = data.message ? data.message : res.statusText;
+        });
+      }
+    })
+    .catch(error => {
+      if (error.message === "Failed to fetch") {
+        rateLimit();
+        return;
+      }
+      errorContainer.style.display = "flex";
+      if (error.message) errorMessage.innerText = error.message;
+      localStorage.setItem("loops-form-timestamp", '');
+    })
+    .finally(() => {
+      formInput.style.display = "none";
+      loadingButton.style.display = "none";
+      backButton.style.display = "block";
+    });
+}
+
+function resetFormHandler(event) {
+  var container = event.target.parentNode;
+  var formInput = container.querySelector(".newsletter-form-input");
+  var success = container.querySelector(".newsletter-success");
+  var errorContainer = container.querySelector(".newsletter-error");
+  var errorMessage = container.querySelector(".newsletter-error-message");
+  var backButton = container.querySelector(".newsletter-back-button");
+  var submitButton = container.querySelector(".newsletter-form-button");
+
+  success.style.display = "none";
+  errorContainer.style.display = "none";
+  errorMessage.innerText = "Oops! Something went wrong, please try again";
+  backButton.style.display = "none";
+  formInput.style.display = "flex";
+  submitButton.style.display = "flex";
+}
+
+var formContainers = document.getElementsByClassName("newsletter-form-container");
+for (var i = 0; i < formContainers.length; i++) {
+  var formContainer = formContainers[i]
+  var handlersAdded = formContainer.classList.contains('newsletter-handlers-added')
+  if (handlersAdded) continue;
+  formContainer
+    .querySelector(".newsletter-form")
+    .addEventListener("submit", submitHandler);
+  formContainer
+    .querySelector(".newsletter-back-button")
+    .addEventListener("click", resetFormHandler);
+  formContainer.classList.add("newsletter-handlers-added");
+}
+</script>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

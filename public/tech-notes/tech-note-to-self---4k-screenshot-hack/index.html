@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,10 @@
 <meta name="description" content="You can take 4K screenshots in Chrome dev tools.
 F12 → toggle device emulation → add custom device (1920x1080, 4x pixel ratio) → three dots → capture screenshot.
 Also does full-page screenshots.
-Video
+
+        
+        
+    
 Might come in handy when recording screen!">
 <meta name="author" content="Alex Dobrenko">
 <link rel="canonical" href="http://localhost:1313/tech-notes/tech-note-to-self---4k-screenshot-hack/">
@@ -43,38 +46,41 @@ Might come in handy when recording screen!">
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-</head>
-
-<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+       document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
-
-<header class="header">
+</head>
+<body id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
@@ -137,10 +143,19 @@ Might come in handy when recording screen!">
 
 </div>
   </header> 
+
   <div class="post-content"><p>You can take 4K screenshots in Chrome dev tools.</p>
 <p>F12 → toggle device emulation → add custom device (1920x1080, 4x pixel ratio) → three dots → capture screenshot.</p>
 <p>Also does full-page screenshots.</p>
-<p><a href="https://www.youtube.com/watch?v=MOuSu0UO7Sc">Video</a></p>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+        <iframe
+            src="https://www.youtube.com/embed/MOuSu0UO7Sc"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+            allowfullscreen
+            title="YouTube video"
+            loading="lazy">
+        </iframe>
+    </div></p>
 <p>Might come in handy when recording screen!</p>
 
 
@@ -155,7 +170,7 @@ Might come in handy when recording screen!">
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Both Are True</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
 
     <span>
         Powered by
@@ -167,7 +182,10 @@ Might come in handy when recording screen!">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
 <div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
   <form class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
@@ -319,9 +337,14 @@ for (var i = 0; i < formContainers.length; i++) {
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -362,11 +385,12 @@ for (var i = 0; i < formContainers.length; i++) {
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

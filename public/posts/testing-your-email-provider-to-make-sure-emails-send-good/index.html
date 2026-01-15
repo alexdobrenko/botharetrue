@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>testing your email provider to make sure emails send good | Both Are True</title>
+<meta name="keywords" content="">
+<meta name="description" content="How I&rsquo;m Testing My New Email Provider (Loops)
+So here’s what I did.
+1. First Stop: Mail-Tester
+I went to mail-tester.com, grabbed the weird little temporary email address they gave me, added it to my Loops list, and sent my email.
+Score came back great. 9.5/10. Huge win.
+2. Then I Tried My Personal Gmail
+I added my own personal email to the Loops list because I wanted to see where it actually lands in a real inbox.">
+<meta name="author" content="Alex Dobrenko">
+<link rel="canonical" href="http://localhost:1313/posts/testing-your-email-provider-to-make-sure-emails-send-good/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/testing-your-email-provider-to-make-sure-emails-send-good/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Essays">
+                    <span>Essays</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/evergreen/" title="Evergreen">
+                    <span>Evergreen</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/reading/" title="Reading">
+                    <span>Reading</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      testing your email provider to make sure emails send good
+    </h1>
+    <div class="post-meta"><span title='2025-11-18 00:00:00 +0000 UTC'>November 18, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span>
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#how-im-testing-my-new-email-provider-loops" aria-label="How I&rsquo;m Testing My New Email Provider (Loops)">How I&rsquo;m Testing My New Email Provider (Loops)</a><ul>
+                        
+                <li>
+                    <a href="#1-first-stop-mail-tester" aria-label="1. First Stop: Mail-Tester">1. First Stop: Mail-Tester</a></li>
+                <li>
+                    <a href="#2-then-i-tried-my-personal-gmail" aria-label="2. Then I Tried My Personal Gmail">2. Then I Tried My Personal Gmail</a></li>
+                <li>
+                    <a href="#3-so-now-the-question-is-how-do-i-fix-that" aria-label="3. So Now the Question Is: How Do I Fix That?">3. So Now the Question Is: How Do I Fix That?</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="how-im-testing-my-new-email-provider-loops">How I&rsquo;m Testing My New Email Provider (Loops)<a hidden class="anchor" aria-hidden="true" href="#how-im-testing-my-new-email-provider-loops">#</a></h1>
+<p>So here’s what I did.</p>
+<h2 id="1-first-stop-mail-tester">1. First Stop: Mail-Tester<a hidden class="anchor" aria-hidden="true" href="#1-first-stop-mail-tester">#</a></h2>
+<p>I went to <strong>mail-tester.com</strong>, grabbed the weird little temporary email address they gave me, added it to my Loops list, and sent my email.</p>
+<p>Score came back great. 9.5/10. Huge win.</p>
+<h2 id="2-then-i-tried-my-personal-gmail">2. Then I Tried My Personal Gmail<a hidden class="anchor" aria-hidden="true" href="#2-then-i-tried-my-personal-gmail">#</a></h2>
+<p>I added my own personal email to the Loops list because I wanted to see where it <em>actually</em> lands in a real inbox.</p>
+<p>It didn’t go to Spam (yay), but it also didn’t hit my inbox.<br>
+Instead it went to this weird purgatory: <strong>All Mail</strong>.</p>
+<p>No clue why Gmail does this, but it’s not the inbox and it’s not spam… it’s like the middle child.</p>
+<h2 id="3-so-now-the-question-is-how-do-i-fix-that">3. So Now the Question Is: How Do I Fix That?<a hidden class="anchor" aria-hidden="true" href="#3-so-now-the-question-is-how-do-i-fix-that">#</a></h2>
+<p>And honestly… I don’t know if I <em>can</em> fully fix that myself. At least not instantly.</p>
+<p>I’m now going to run some tests by asking 10 friends to help me out.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/switching-from-explore-to-exploit/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>switching from explore to exploit</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/the-first-short-film-from-the-duplass-brothers/">
+    <span class="title">Next »</span>
+    <br>
+    <span>the first short film from the duplass brothers</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+<div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
+  <form class="newsletter-form"
+    action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
+    method="POST"
+    style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%;">
+    <input class="newsletter-form-input"
+      name="newsletter-form-input"
+      type="email"
+      placeholder="you@example.com"
+      required
+      style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px; margin: 0px 10px 0px 0px; width: 100%; max-width: 300px; min-width: 100px; background: rgb(255, 255, 255); border: 1px solid rgb(209, 213, 219); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; padding: 8px 12px;">
+    <button
+      type="submit"
+      class="newsletter-form-button"
+      style="background: rgb(233, 127, 0); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: flex; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">
+      Sign up to get my dumb weird emails
+    </button>
+    <button
+      type="button"
+      class="newsletter-loading-button"
+      style="background: rgb(233, 127, 0); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: none; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">
+      Please wait...
+    </button>
+  </form>
+  <div class="newsletter-success" style="display: none; align-items: center; justify-content: center; width: 100%;">
+    <p class="newsletter-success-message" style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px;">
+      Well, color me gobsmacked. You did it. Get ready for some emails.
+    </p>
+  </div>
+  <div class="newsletter-error" style="display: none; align-items: center; justify-content: center; width: 100%;">
+    <p class="newsletter-error-message" style="font-family: Inter, sans-serif; color: rgb(185, 28, 28); font-size: 14px;">
+      Oops! Something went wrong, please try again
+    </p>
+  </div>
+  <button
+    class='newsletter-back-button'
+    type='button'
+    style='color:#6b7280;font: 14px, Inter, sans-serif;margin:10px auto;text-align:center;display:none;background:transparent;border:none;cursor:pointer'
+    onmouseout='this.style.textDecoration="none"'
+    onmouseover='this.style.textDecoration="underline"'>
+    &larr; Back
+  </button>
+</div>
+
+<script>
+function submitHandler(event) {
+  event.preventDefault();
+  var container = event.target.parentNode;
+  var form = container.querySelector(".newsletter-form");
+  var formInput = container.querySelector(".newsletter-form-input");
+  var success = container.querySelector(".newsletter-success");
+  var errorContainer = container.querySelector(".newsletter-error");
+  var errorMessage = container.querySelector(".newsletter-error-message");
+  var backButton = container.querySelector(".newsletter-back-button");
+  var submitButton = container.querySelector(".newsletter-form-button");
+  var loadingButton = container.querySelector(".newsletter-loading-button");
+
+
+  const rateLimit = () => {
+    errorContainer.style.display = "flex";
+    errorMessage.innerText = "Too many signups, please try again in a little while";
+    submitButton.style.display = "none";
+    formInput.style.display = "none";
+    backButton.style.display = "block";
+  }
+
+  var time = new Date();
+  var timestamp = time.valueOf();
+  var previousTimestamp = localStorage.getItem("loops-form-timestamp");
+
+  if (previousTimestamp && Number(previousTimestamp) + 60000 > timestamp) {
+    rateLimit();
+    return;
+  }
+  localStorage.setItem("loops-form-timestamp", timestamp);
+
+  submitButton.style.display = "none";
+  loadingButton.style.display = "flex";
+
+  var formBody = "userGroup=&mailingLists=&email="
+    + encodeURIComponent(formInput.value);
+
+  fetch(event.target.action, {
+    method: "POST",
+    body: formBody,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+  })
+    .then((res) => [res.ok, res.json(), res])
+    .then(([ok, dataPromise, res]) => {
+      if (ok) {
+        success.style.display = "flex";
+        form.reset();
+      } else {
+        dataPromise.then(data => {
+          errorContainer.style.display = "flex";
+          errorMessage.innerText = data.message ? data.message : res.statusText;
+        });
+      }
+    })
+    .catch(error => {
+      if (error.message === "Failed to fetch") {
+        rateLimit();
+        return;
+      }
+      errorContainer.style.display = "flex";
+      if (error.message) errorMessage.innerText = error.message;
+      localStorage.setItem("loops-form-timestamp", '');
+    })
+    .finally(() => {
+      formInput.style.display = "none";
+      loadingButton.style.display = "none";
+      backButton.style.display = "block";
+    });
+}
+
+function resetFormHandler(event) {
+  var container = event.target.parentNode;
+  var formInput = container.querySelector(".newsletter-form-input");
+  var success = container.querySelector(".newsletter-success");
+  var errorContainer = container.querySelector(".newsletter-error");
+  var errorMessage = container.querySelector(".newsletter-error-message");
+  var backButton = container.querySelector(".newsletter-back-button");
+  var submitButton = container.querySelector(".newsletter-form-button");
+
+  success.style.display = "none";
+  errorContainer.style.display = "none";
+  errorMessage.innerText = "Oops! Something went wrong, please try again";
+  backButton.style.display = "none";
+  formInput.style.display = "flex";
+  submitButton.style.display = "flex";
+}
+
+var formContainers = document.getElementsByClassName("newsletter-form-container");
+for (var i = 0; i < formContainers.length; i++) {
+  var formContainer = formContainers[i]
+  var handlersAdded = formContainer.classList.contains('newsletter-handlers-added')
+  if (handlersAdded) continue;
+  formContainer
+    .querySelector(".newsletter-form")
+    .addEventListener("submit", submitHandler);
+  formContainer
+    .querySelector(".newsletter-back-button")
+    .addEventListener("click", resetFormHandler);
+  formContainer.classList.add("newsletter-handlers-added");
+}
+</script>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -6,7 +6,226 @@
     <description>Recent content in Tech Notes to Self on Both Are True</description>
     <generator>Hugo -- 0.150.1</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tech-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Reddit Briefing Agent That Emails You What Matters</title>
+      <link>http://localhost:1313/tech-notes/claude-code-reddit-briefing-agent/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-reddit-briefing-agent/</guid>
+      <description>&lt;h2 id=&#34;part-1-step-by-step-tutorial&#34;&gt;Part 1: Step-by-Step Tutorial&lt;/h2&gt;
+&lt;h3 id=&#34;what-this-workflow-does&#34;&gt;What This Workflow Does&lt;/h3&gt;
+&lt;p&gt;Scrapes a subreddit via Apify, sends the posts to Claude for analysis, and emails you a smart summary. Runs automatically every 8 hours via GitHub Actions. You wake up to a briefing that tells you what&amp;rsquo;s actually worth knowing.&lt;/p&gt;
+&lt;h3 id=&#34;the-setup&#34;&gt;The Setup&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub repo with Actions enabled&lt;/li&gt;
+&lt;li&gt;Secrets configured: &lt;code&gt;APIFY_TOKEN&lt;/code&gt;, &lt;code&gt;ANTHROPIC_API_KEY&lt;/code&gt;, &lt;code&gt;RESEND_API_KEY&lt;/code&gt;, &lt;code&gt;EMAIL_TO&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Python script that orchestrates the whole thing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-prompt&#34;&gt;The Prompt&lt;/h3&gt;
+&lt;p&gt;The analysis prompt tells Claude to be a &amp;ldquo;sharp, no-BS analyst&amp;rdquo; and organize findings into:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building a Zine Email Drip Campaign with Claude Code</title>
+      <link>http://localhost:1313/tech-notes/building-a-zine-email-drip-campaign/</link>
+      <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/building-a-zine-email-drip-campaign/</guid>
+      <description>&lt;h1 id=&#34;building-a-zine-email-drip-campaign-with-claude-code&#34;&gt;Building a Zine Email Drip Campaign with Claude Code&lt;/h1&gt;
+&lt;h2 id=&#34;part-1-tutorial&#34;&gt;Part 1: Tutorial&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The project:&lt;/strong&gt; Turn a month of daily journal entries into a &amp;ldquo;zine&amp;rdquo; — 58 notes delivered via email over ~30 days, at roughly the same times they were originally written. Plus a website to read everything at once.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The stack:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Content: Markdown files in Obsidian&lt;/li&gt;
+&lt;li&gt;Website: Static HTML on Netlify&lt;/li&gt;
+&lt;li&gt;Email delivery: Loops.so&lt;/li&gt;
+&lt;li&gt;Build tool: Python script + Claude Code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-content-structure&#34;&gt;The Content Structure&lt;/h3&gt;
+&lt;p&gt;Source files live in an Obsidian vault with YAML frontmatter:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog Publishing Workflow Using Claude Code</title>
+      <link>http://localhost:1313/tech-notes/claude-code-blog-publishing-workflow/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-blog-publishing-workflow/</guid>
+      <description>&lt;h1 id=&#34;blog-publishing-workflow-using-claude-code&#34;&gt;Blog Publishing Workflow Using Claude Code&lt;/h1&gt;
+&lt;h2 id=&#34;part-1-tutorial&#34;&gt;Part 1: Tutorial&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The setup:&lt;/strong&gt; I write in Obsidian. My blog runs on Hugo with the PaperMod theme, hosted on Netlify. I needed a way to go from markdown file → live on botharetrue.com with one command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The solution:&lt;/strong&gt; A bash script that syncs from my vault, converts Obsidian syntax to Hugo, handles images, commits to git, and waits for Netlify deployment.&lt;/p&gt;
+&lt;h3 id=&#34;folder-structure&#34;&gt;Folder Structure&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Source (Obsidian vault):&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chief of Staff Workflow Using Claude Code</title>
+      <link>http://localhost:1313/tech-notes/claude-code-chief-of-staff-workflow/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-chief-of-staff-workflow/</guid>
+      <description>&lt;h1 id=&#34;chief-of-staff-workflow-using-claude-code&#34;&gt;Chief of Staff Workflow Using Claude Code&lt;/h1&gt;
+&lt;h2 id=&#34;part-1-tutorial&#34;&gt;Part 1: Tutorial&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The problem:&lt;/strong&gt; Claude doesn&amp;rsquo;t remember anything between sessions. Every conversation starts fresh. But I need a thinking partner who knows my projects, clients, deadlines, and what I&amp;rsquo;m avoiding.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The solution:&lt;/strong&gt; A slash command + session files that Claude reads every time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Setup:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create the slash command at &lt;code&gt;~/.claude/commands/chief-of-staff.md&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;# Chief of Staff
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;You are my Chief of Staff.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[Define the persona, values, responsibilities...]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## First thing: Read the session files
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;Always start by reading: /path/to/chief-of-staff-sessions/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ARGUMENTS
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Create a session folder with a brain dump file:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/chief-of-staff-sessions/
+├── brain-dump.md          # Main state: all clients, tasks, open loops
+├── topics-for-connor.md   # Running list for specific people
+└── [add more as needed]
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Structure the brain dump by client/project:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## CLIENT: Stacks &amp;amp; Joules
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Status:** Social scheduled for month ✓
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **This week:** End-of-year report deck
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Owed:** Fran &amp;amp; Amoret thank-you post
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;## CLIENT: FMLY
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Deadline:** Dec 22
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; **Status:** Website prototype in progress
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;How I use it:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Naming Workflow Using Claude Code</title>
+      <link>http://localhost:1313/tech-notes/claude-code-image-naming-workflow/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-image-naming-workflow/</guid>
+      <description>&lt;h1 id=&#34;image-naming-workflow-using-claude-code&#34;&gt;Image Naming Workflow Using Claude Code&lt;/h1&gt;
+&lt;h2 id=&#34;part-1-tutorial&#34;&gt;Part 1: Tutorial&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;The task:&lt;/strong&gt; 125 event photos named &lt;code&gt;001.jpg&lt;/code&gt; through &lt;code&gt;125.jpg&lt;/code&gt;. Need them searchable and web-ready.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What I did:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Asked Claude Code to review images in batches of 10&lt;/li&gt;
+&lt;li&gt;It looked at each image, described what it saw, renamed the file&lt;/li&gt;
+&lt;li&gt;Then ran a resize script to get everything under 1MB&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;The prompt:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Review images 001.jpg through 010.jpg in [folder] and rename them based on what&amp;#39;s in each image
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Naming pattern Claude used:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Video Renaming Workflow Using Claude Code</title>
+      <link>http://localhost:1313/tech-notes/claude-code-video-renaming-workflow/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-video-renaming-workflow/</guid>
+      <description>&lt;h1 id=&#34;video-renaming-workflow-using-claude-code&#34;&gt;Video Renaming Workflow Using Claude Code&lt;/h1&gt;
+&lt;h2 id=&#34;part-1-step-by-step-tutorial&#34;&gt;Part 1: Step-by-Step Tutorial&lt;/h2&gt;
+&lt;h3 id=&#34;what-this-workflow-does&#34;&gt;What This Workflow Does&lt;/h3&gt;
+&lt;p&gt;Use Claude Code to automatically analyze video files and rename them with descriptive names based on their visual content. No more &lt;code&gt;1.MP4&lt;/code&gt;, &lt;code&gt;2.MP4&lt;/code&gt; chaos.&lt;/p&gt;
+&lt;h3 id=&#34;the-setup&#34;&gt;The Setup&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Have your videos in a folder (local drive or external)&lt;/li&gt;
+&lt;li&gt;Open Claude Code&lt;/li&gt;
+&lt;li&gt;Optional: Have related photos with good names for context&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;the-prompt&#34;&gt;The Prompt&lt;/h3&gt;
+&lt;p&gt;Just tell Claude what you need:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating Custom Slash Commands in Claude Code</title>
+      <link>http://localhost:1313/tech-notes/claude-code-custom-slash-commands/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-custom-slash-commands/</guid>
+      <description>&lt;h1 id=&#34;creating-custom-slash-commands-in-claude-code&#34;&gt;Creating Custom Slash Commands in Claude Code&lt;/h1&gt;
+&lt;h2 id=&#34;part-1-step-by-step-tutorial&#34;&gt;Part 1: Step-by-Step Tutorial&lt;/h2&gt;
+&lt;h3 id=&#34;what-this-workflow-does&#34;&gt;What This Workflow Does&lt;/h3&gt;
+&lt;p&gt;Create a reusable slash command in Claude Code that you can trigger anytime to document your session and turn it into a blog post.&lt;/p&gt;
+&lt;h3 id=&#34;the-setup&#34;&gt;The Setup&lt;/h3&gt;
+&lt;p&gt;Alex had just used Claude to rename a bunch of screenshot files. Then asked:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;awesome. so now is there a slash command I can use to do this whenever i&amp;#39;m using claude code?
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;what-claude-did&#34;&gt;What Claude Did&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Created the commands directory&lt;/strong&gt; (if it doesn&amp;rsquo;t exist):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Renaming Workflow Using Claude Code</title>
+      <link>http://localhost:1313/tech-notes/claude-code-image-renaming-workflow/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-image-renaming-workflow/</guid>
+      <description>&lt;h1 id=&#34;image-renaming-workflow-using-claude-code&#34;&gt;Image Renaming Workflow Using Claude Code&lt;/h1&gt;
+&lt;h2 id=&#34;part-1-step-by-step-tutorial&#34;&gt;Part 1: Step-by-Step Tutorial&lt;/h2&gt;
+&lt;h3 id=&#34;what-this-workflow-does&#34;&gt;What This Workflow Does&lt;/h3&gt;
+&lt;p&gt;Use Claude Code to automatically read image files (screenshots, photos, etc.) and rename them with descriptive names based on their content. No more &lt;code&gt;SCR-20251205-gdoq.png&lt;/code&gt; nonsense.&lt;/p&gt;
+&lt;h3 id=&#34;the-setup&#34;&gt;The Setup&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the folder containing your cryptically-named images&lt;/li&gt;
+&lt;li&gt;Open Claude Code in that directory&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;the-prompt&#34;&gt;The Prompt&lt;/h3&gt;
+&lt;p&gt;Just ask Claude to review and rename:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;review these and rename the photos so its clearer what each one is about
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s it. That&amp;rsquo;s the whole prompt.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>claude-code-commands-vs-agents</title>
+      <link>http://localhost:1313/tech-notes/claude-code-commands-vs-agents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/claude-code-commands-vs-agents/</guid>
+      <description>&lt;h2 id=&#34;the-quick-version&#34;&gt;The Quick Version&lt;/h2&gt;
+&lt;p&gt;In Claude Code, there are two ways to extend what Claude can do: &lt;strong&gt;commands&lt;/strong&gt; (also called &lt;strong&gt;skills&lt;/strong&gt;) and &lt;strong&gt;agents&lt;/strong&gt;. They live in similar places and look almost identical. But they work completely differently.&lt;/p&gt;
+&lt;p&gt;(If you see &amp;ldquo;skill&amp;rdquo; anywhere in Claude Code, it&amp;rsquo;s the same thing as a command. The terms are interchangeable.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Commands&lt;/strong&gt; are things you invoke. You type &lt;code&gt;/chief-of-staff&lt;/code&gt; and suddenly Claude has a bunch of context loaded about how to be your chief of staff.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ghostwriting-linkedin-post-for-ceo</title>
+      <link>http://localhost:1313/tech-notes/ghostwriting-linkedin-post-for-ceo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/ghostwriting-linkedin-post-for-ceo/</guid>
+      <description>&lt;h2 id=&#34;step-by-step-tutorial&#34;&gt;Step-by-Step Tutorial&lt;/h2&gt;
+&lt;h3 id=&#34;what-this-does&#34;&gt;What This Does&lt;/h3&gt;
+&lt;p&gt;Research a podcast guest&amp;rsquo;s social media presence across platforms, analyze their actual posting style, and draft LinkedIn copy that sounds like them—not like a marketing team wrote it.&lt;/p&gt;
+&lt;h3 id=&#34;the-prompts&#34;&gt;The Prompts&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Research phase:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Can you research the details for [Guest] across social platforms and for [Company] across socials? And what other channels they might have - email newsletters etc
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Voice analysis:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Can you search thru what [Guest] posts on his own LinkedIn to see if we have precedent for how to do this?
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Drafting:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ralph-loop-twitter-posts</title>
+      <link>http://localhost:1313/tech-notes/ralph-loop-twitter-posts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/ralph-loop-twitter-posts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>scraping-instagram-for-brand-research</title>
+      <link>http://localhost:1313/tech-notes/scraping-instagram-for-brand-research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tech-notes/scraping-instagram-for-brand-research/</guid>
+      <description>&lt;h2 id=&#34;step-by-step-tutorial&#34;&gt;Step-by-Step Tutorial&lt;/h2&gt;
+&lt;h3 id=&#34;what-this-does&#34;&gt;What This Does&lt;/h3&gt;
+&lt;p&gt;Builds a local web app to review competitor Instagram posts with real images and engagement data. Swipe through posts, vote yes/no, see patterns in what you like.&lt;/p&gt;
+&lt;h3 id=&#34;the-prompt&#34;&gt;The Prompt&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;I need to do visual competitive research for Stacks+Joules Instagram.
+Build me a review app where I can swipe through posts from these accounts
+and vote on which ones I like.
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;what-claude-does&#34;&gt;What Claude Does&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Creates HTML/CSS/JS review app with swipeable cards&lt;/li&gt;
+&lt;li&gt;Uses Apify to scrape Instagram profiles (avoids login walls)&lt;/li&gt;
+&lt;li&gt;Downloads actual images locally&lt;/li&gt;
+&lt;li&gt;Generates data file with engagement metrics&lt;/li&gt;
+&lt;li&gt;Fixes various display bugs as they come up&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;example-results&#34;&gt;Example Results&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Before:&lt;/strong&gt; Placeholder images, no real data
+&lt;strong&gt;After:&lt;/strong&gt; 84 real Instagram posts with likes, comments, captions, and full images&lt;/p&gt;</description>
+    </item>
     <item>
       <title>tech note to self - 4k-screenshot-hack</title>
       <link>http://localhost:1313/tech-notes/tech-note-to-self---4k-screenshot-hack/</link>
@@ -15,7 +234,15 @@
       <description>&lt;p&gt;You can take 4K screenshots in Chrome dev tools.&lt;/p&gt;
 &lt;p&gt;F12 → toggle device emulation → add custom device (1920x1080, 4x pixel ratio) → three dots → capture screenshot.&lt;/p&gt;
 &lt;p&gt;Also does full-page screenshots.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=MOuSu0UO7Sc&#34;&gt;Video&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;&#34;&gt;
+        &lt;iframe
+            src=&#34;https://www.youtube.com/embed/MOuSu0UO7Sc&#34;
+            style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;&#34;
+            allowfullscreen
+            title=&#34;YouTube video&#34;
+            loading=&#34;lazy&#34;&gt;
+        &lt;/iframe&gt;
+    &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;Might come in handy when recording screen!&lt;/p&gt;</description>
     </item>
   </channel>

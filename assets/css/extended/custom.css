@@ -1,3 +1,75 @@
+/* ===========================================
+   PaperModX-style Features
+   =========================================== */
+
+/* 1. Accent Colors for Links */
+:root {
+    --link-color: #0066cc;
+    --link-hover-color: #004499;
+    --link-underline-shadow: 0 1px 0 var(--link-color);
+}
+
+[data-theme="dark"] {
+    --link-color: #6db3f2;
+    --link-hover-color: #9dcbf7;
+}
+
+.post-content a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+.post-content a:hover {
+    color: var(--link-hover-color);
+}
+
+/* 2. Floating Table of Contents (shows on wide screens) */
+@media (min-width: 1440px) {
+    .toc {
+        position: sticky;
+        top: 100px;
+        float: right;
+        width: 250px;
+        margin-left: 20px;
+        margin-right: calc((100vw - 800px) / -2 + 40px);
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        padding: 1rem;
+        background: var(--code-bg);
+        border-radius: 8px;
+        font-size: 0.9em;
+    }
+
+    .toc .inner {
+        padding: 0;
+    }
+
+    .post-content {
+        max-width: 800px;
+    }
+}
+
+/* 3. External Link Icons */
+.post-content a[href^="http"]:not([href*="botharetrue.com"])::after,
+.post-content a[href^="https"]:not([href*="botharetrue.com"])::after {
+    content: " ↗";
+    font-size: 0.8em;
+    opacity: 0.7;
+    vertical-align: super;
+}
+
+/* Menu external links */
+.menu a[data-external="true"]::after {
+    content: " ↗";
+    font-size: 0.75em;
+}
+
+/* ===========================================
+   Obsidian-style Callouts
+   =========================================== */
+
 /* Obsidian-style Callouts */
 .callout {
     padding: 1rem;

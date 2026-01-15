@@ -6,26 +6,257 @@
     <description>Recent content in Posts on Both Are True</description>
     <generator>Hugo -- 0.150.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>who is lying?</title>
+      <link>http://localhost:1313/posts/who-is-lying/</link>
+      <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/who-is-lying/</guid>
+      <description>&lt;p&gt;I just came across this weird fun little mind puzzler:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Pasted image 20260114041903.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Pasted%20image%2020260114041903.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Besides the many things I love about this website, made by coder / hacker / weird guy Nolan Royalty (see the footnote thing he does), I&amp;rsquo;m also just very drawn to trying to solve this. So before I look for the answer, I&amp;rsquo;m gonna try to solve it myself.&lt;/p&gt;
+&lt;p&gt;If you wanna try, don&amp;rsquo;t read below.&lt;/p&gt;
+&lt;h2 id=&#34;my-answer&#34;&gt;my answer&lt;/h2&gt;
+&lt;p&gt;I think the move is to ask Bob if Alice is lying. He&amp;rsquo;ll tell you the truth 80% of the time. You can then ask Alice if Bob is lying or not and she&amp;rsquo;ll tell you the truth 80% of the time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>hi paul</title>
+      <link>http://localhost:1313/posts/hi-paul/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hi-paul/</guid>
+      <description>&lt;p&gt;this is me alex!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>i gotta write my own stuff</title>
+      <link>http://localhost:1313/posts/i-gotta-write-my-own-stuff/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/i-gotta-write-my-own-stuff/</guid>
+      <description>&lt;p&gt;I keep trying to take shortcuts - that&amp;rsquo;s one of the main things AI can help with, after all. And one place I keep trying and failing is writing.&lt;/p&gt;
+&lt;p&gt;Like with &lt;a href=&#34;http://localhost:1313/posts/just-ask-claude/&#34;&gt;this essay&lt;/a&gt;. I tried by first doing a voice note and having it turn the voice note into an essay and I just&amp;hellip;didn&amp;rsquo;t like it. It didn&amp;rsquo;t feel like me, even if the prompt I gave was &amp;ldquo;sound like me.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>just ask claude</title>
+      <link>http://localhost:1313/posts/asking-claude/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/asking-claude/</guid>
+      <description>&lt;p&gt;So I just got off a call with someone interested in learning all the claude code stuff.&lt;/p&gt;
+&lt;p&gt;It was fun and cool and i muttered a lot, laughed too loud, and was generally anxious about sounding smart or making myself look like anything other than an idiot. Healthy stuff!&lt;/p&gt;
+&lt;p&gt;But, and, yet, the one thing i kept saying as an answer to this kind friend&amp;rsquo;s questions was simply this:&lt;/p&gt;
+&lt;h2 id=&#34;just-ask-claude&#34;&gt;just ask claude&lt;/h2&gt;
+&lt;p&gt;Not sure how to install something on github? Just ask claude.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>just ask claude (ai-assisted draft)</title>
+      <link>http://localhost:1313/posts/just-ask-claude/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/just-ask-claude/</guid>
+      <description>&lt;h1 id=&#34;just-ask-claude&#34;&gt;just ask claude&lt;/h1&gt;
+&lt;p&gt;Here&amp;rsquo;s what&amp;rsquo;s actually changing: you think you can&amp;rsquo;t solve this stuff. And you probably can.&lt;/p&gt;
+&lt;p&gt;And if you can&amp;rsquo;t, Claude can help. Or someone on the internet can help. The information is out there. The capability is out there.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not saying it&amp;rsquo;ll be easy. Some people have a stronger technical awareness. A depth to it. But that&amp;rsquo;s also where people like me can help.&lt;/p&gt;
+&lt;p&gt;Because one of the traps of &amp;ldquo;just ask Claude&amp;rdquo; is that it&amp;rsquo;ll lead you in bad directions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>hi brian</title>
+      <link>http://localhost:1313/posts/hi-brian/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hi-brian/</guid>
+      <description>&lt;p&gt;lets see if this works!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>i made something to help me actually finish projects. then i had a meltdown trying to sell it. now it&#39;s free.</title>
+      <link>http://localhost:1313/posts/i-made-something-then-had-a-meltdown-now-its-free/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/i-made-something-then-had-a-meltdown-now-its-free/</guid>
+      <description>&lt;p&gt;ok so here&amp;rsquo;s what happened.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been vibe coding for like a year. I have a captioning tool that&amp;rsquo;s 70% done. a game. a blog system. all of them &amp;ldquo;almost there.&amp;rdquo; none of them shipped.&lt;/p&gt;
+&lt;p&gt;so I made myself a little system. one project at a time. everything else is dormant. write it down. actually write it down. and it worked. I shipped a zine in one day that had been sitting untouched for weeks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>what is an editor anyways</title>
+      <link>http://localhost:1313/posts/what-is-an-editor-anyways/</link>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/what-is-an-editor-anyways/</guid>
+      <description>&lt;p&gt;asking myself this as I read about a man named Lish.&lt;/p&gt;
+&lt;p&gt;Gordon Lish.&lt;/p&gt;
+&lt;p&gt;Editor of Raymond Carver. Friend of Don Delillio.&lt;/p&gt;
+&lt;p&gt;I learned about him as a quick aside mentioned here in this YT video on White Noise which sent me googling and found me here at this &amp;rsquo;expose&amp;rsquo; in the nytimes in 1998 about how Lish edited Carver&amp;rsquo;s early works quite a lot, it seemed, and perhaps enough to say that he was the guy who wrote them?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&#34;chatgpt said...&#34;</title>
+      <link>http://localhost:1313/posts/chatgpt-said.../</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chatgpt-said.../</guid>
+      <description>&lt;p&gt;I just came up with this in my last post - testing your email provider to make sure emails send good and I gotta say, i like it. Basically its a way of adding stuff that GPT said without having to rewrite it in my voice or have it be that weird amalgamation between the two. Feels like a big unlock honestly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>a feeling and a realization (unrelated, but maybe not?)</title>
+      <link>http://localhost:1313/posts/a-feeling-and-a-realization-unrelated-but-maybe-not/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/a-feeling-and-a-realization-unrelated-but-maybe-not/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Pasted image 20251118045358.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Pasted%20image%2020251118045358.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-feeling&#34;&gt;the feeling&lt;/h2&gt;
+&lt;p&gt;The feeling was stepping out of my back office, hearing a baby wailing, and realizing that that baby was not our baby — it was a neighbor&amp;rsquo;s baby. That someone else was dealing with this bullshit.&lt;/p&gt;
+&lt;p&gt;Not because I want other people to deal with it, but simply because I don&amp;rsquo;t want to deal with it.&lt;/p&gt;
+&lt;p&gt;And even that&amp;rsquo;s not true. It&amp;rsquo;s more that I&amp;rsquo;m just glad to be in a world where I&amp;rsquo;m not the only one who feels that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>switching from explore to exploit</title>
+      <link>http://localhost:1313/posts/switching-from-explore-to-exploit/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/switching-from-explore-to-exploit/</guid>
+      <description>&lt;p&gt;I hate that terminology but it isn&amp;rsquo;t wrong.&lt;/p&gt;
+&lt;p&gt;Explore mode is when you just wanna rummage around your ideas and everything is great and possible and expansive. Divergence is another term for it. This leads to that which leads to those and so on.&lt;/p&gt;
+&lt;p&gt;But eventually one must say &amp;rsquo;enough&amp;rsquo; and stop. One must converge. Take what is there and do something with it. Package it for the marketplace? Create something worth consuming? Something that has a point?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>testing your email provider to make sure emails send good</title>
+      <link>http://localhost:1313/posts/testing-your-email-provider-to-make-sure-emails-send-good/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/testing-your-email-provider-to-make-sure-emails-send-good/</guid>
+      <description>&lt;h1 id=&#34;how-im-testing-my-new-email-provider-loops&#34;&gt;How I&amp;rsquo;m Testing My New Email Provider (Loops)&lt;/h1&gt;
+&lt;p&gt;So here’s what I did.&lt;/p&gt;
+&lt;h2 id=&#34;1-first-stop-mail-tester&#34;&gt;1. First Stop: Mail-Tester&lt;/h2&gt;
+&lt;p&gt;I went to &lt;strong&gt;mail-tester.com&lt;/strong&gt;, grabbed the weird little temporary email address they gave me, added it to my Loops list, and sent my email.&lt;/p&gt;
+&lt;p&gt;Score came back great. 9.5/10. Huge win.&lt;/p&gt;
+&lt;h2 id=&#34;2-then-i-tried-my-personal-gmail&#34;&gt;2. Then I Tried My Personal Gmail&lt;/h2&gt;
+&lt;p&gt;I added my own personal email to the Loops list because I wanted to see where it &lt;em&gt;actually&lt;/em&gt; lands in a real inbox.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>the first short film from the duplass brothers</title>
+      <link>http://localhost:1313/posts/the-first-short-film-from-the-duplass-brothers/</link>
+      <pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-first-short-film-from-the-duplass-brothers/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/4I1Ylynes8A?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;so simple, so good.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>blogging for yourself vs blogging for an audience</title>
+      <link>http://localhost:1313/posts/blogging-for-yourself-vs-blogging-for-an-audience/</link>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/blogging-for-yourself-vs-blogging-for-an-audience/</guid>
+      <description>&lt;p&gt;there&amp;rsquo;s a difference! Because this blog right now is still an infant, and literally I think only three people have ever even been given the link, I am able to be much more sensitive to the shifting experience of writing it as more people become aware of it.&lt;/p&gt;
+&lt;p&gt;for example: i shared it with Michael Dean last week (Michael if you&amp;rsquo;re reading this, which you probably are cuz i&amp;rsquo;ll probably send it to you, hi!).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>i posted a video on youtube</title>
+      <link>http://localhost:1313/posts/i-posted-a-video-on-youtube/</link>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/i-posted-a-video-on-youtube/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/aoHxqc-DsGQ?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;this is, strangely, a huge deal.&lt;/p&gt;
+&lt;p&gt;or not strangely, but just interestingly given how common of a thing that is. everyone is posting onto youtube all the time.&lt;/p&gt;
+&lt;p&gt;and yet for me it felt impossible. until now (dramatic)&lt;/p&gt;
+&lt;p&gt;i decided to run an experiment this morning at about 530am - could i record and publish a video in 30 min.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ramblings for community?</title>
+      <link>http://localhost:1313/posts/ramblings-for-community/</link>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ramblings-for-community/</guid>
+      <description>&lt;p&gt;Just read this awesome short essay &lt;a href=&#34;https://stephango.com/ramblings&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ramblings&lt;/a&gt; from Obsidian CEO Steph Agno in which he (until v recently I assumed Steph was a woman) shares how at their work they have individual channels for each person called ramblings where each person can just write out whatever stuff they&amp;rsquo;re thinking about and working on:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A tip for remote teams of 2-10 people. Create a personal “ramblings” channel for each teammate in your team’s chat app of choice.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>rules and regulations for this blog</title>
+      <link>http://localhost:1313/posts/rules-and-regulations-for-this-blog/</link>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rules-and-regulations-for-this-blog/</guid>
+      <description>&lt;p&gt;God I hope I can stick to these.&lt;/p&gt;
+&lt;p&gt;The first that just came to mind is: no analytics. No knowing which posts do &amp;ldquo;best.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;But isn&amp;rsquo;t that&amp;hellip;useful? For people who come here?&lt;/p&gt;
+&lt;p&gt;damn it I&amp;rsquo;m already folding like a lawn chair.&lt;/p&gt;
+&lt;p&gt;well, that&amp;rsquo;s not really a problem right now - no one reads this, and I sort of want to keep it that way.&lt;/p&gt;
+&lt;p&gt;well, A PART of me wants to keep it that way while another part of course wants people to read this and it grow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>prompts</title>
+      <link>http://localhost:1313/posts/prompts/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/prompts/</guid>
+      <description>&lt;p&gt;I love collecting prompts and just found a bunch of real weird ones in a book titled &lt;a href=&#34;https://www.are.na/block/24530385&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning for people who prefer not to be taught&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Pasted image 20251029033151.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Pasted%20image%2020251029033151.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Some prompts:&lt;/p&gt;
+&lt;h3 id=&#34;just-add-hot-water-and-stir&#34;&gt;Just add hot water and stir&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Pasted image 20251029033359.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Pasted%20image%2020251029033359.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;internship-lottery&#34;&gt;Internship Lottery&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Pasted image 20251029033406.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Pasted%20image%2020251029033406.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;performative-artists-talks&#34;&gt;Performative Artists&amp;rsquo; Talks&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Pasted image 20251029033423.png&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Pasted%20image%2020251029033423.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&#34;Everything feels 85% there. Which is fine. That&#39;s usually the sweet spot for me&#34;</title>
+      <link>http://localhost:1313/posts/everything-feels-85-there.-which-is-fine.-thats-usually-the-sweet-spot-for-me/</link>
+      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/everything-feels-85-there.-which-is-fine.-thats-usually-the-sweet-spot-for-me/</guid>
+      <description>&lt;p&gt;ChatGPT wrote that as part of a summary of my Create a Loops email sequence experiment.&lt;/p&gt;
+&lt;p&gt;And i like it. I like that idea a lot.&lt;/p&gt;
+&lt;p&gt;85% is good enough, at least for this blog. Maybe for Substack too?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&#34;Everything feels 85% there. Which is fine. That’s usually the sweet spot for me&#34;</title>
+      <link>http://localhost:1313/posts/everything-feels-85-there.-which-is-fine.-thats-usually-the-sweet-spot-for-me/</link>
+      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/everything-feels-85-there.-which-is-fine.-thats-usually-the-sweet-spot-for-me/</guid>
+      <description>&lt;p&gt;ChatGPT wrote that as part of a summary of my Create a Loops email sequence experiment.&lt;/p&gt;
+&lt;p&gt;And i like it. I like that idea a lot.&lt;/p&gt;
+&lt;p&gt;85% is good enough, at least for this blog. Maybe for Substack too?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>annoyingly accurate description of being a writer</title>
+      <link>http://localhost:1313/posts/annoyingly-accurate-description-of-being-a-writer/</link>
+      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/annoyingly-accurate-description-of-being-a-writer/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“I don’t write because I think I have something to say. I write because if I don’t, everything feels even worse.”&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;From Lily King&amp;rsquo;s &amp;ldquo;Writers and Lovers&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>starting this feels like being a rollercoaster tycoon</title>
+      <link>http://localhost:1313/posts/starting-this-feels-like-being-a-rollercoaster-tycoon/</link>
+      <pubDate>Sun, 26 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/starting-this-feels-like-being-a-rollercoaster-tycoon/</guid>
+      <description>&lt;p&gt;The whole process of creating my own blog/home outside Substack feels like RollerCoaster Tycoon. I’m inviting people into the park, but nothing is actually built, and everybody is going to be vomiting up the side.&lt;/p&gt;
+&lt;p&gt;Truth be told, I haven&amp;rsquo;t even started to invite people. I haven&amp;rsquo;t opened the park. I kind of don&amp;rsquo;t want to. I sort of want it to feel like a park you have to stumble upon to use the parlance of an old URL. But then I am also creating the loops and I do want to move people through them. I just have a lot of doubt about that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Debbie Weil wrote a nice thing about my last workshop!!</title>
+      <link>http://localhost:1313/posts/debbie-weil-wrote-a-nice-thing-about-my-last-workshop/</link>
+      <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/debbie-weil-wrote-a-nice-thing-about-my-last-workshop/</guid>
+      <description>&lt;p&gt;There&amp;rsquo;s a special magic when someone writes something based on an idea you shared with them.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s what happened when Debbie wrote about the ideas from my funny/vulnerable workshop.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Alex explained that this is called a “tilt” – it’s when things get interesting.&lt;/strong&gt; We talked about tilts a lot; they’re a common feature of improv comedy. It’s when you’ve got an established scene (two people on a park bench, for example), and then one says something that “tilts” the scene into absurdity. Tilts can happen in writing even when it’s not humor writing, per se. They’re what turn the “boring and obvious” into something surprising and intriguing.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>say it until it&#39;s yours</title>
       <link>http://localhost:1313/posts/say-it-until-its-yours/</link>
       <pubDate>Fri, 24 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/say-it-until-its-yours/</guid>
-      <description>&lt;p&gt;From Tom White&amp;rsquo;s piece &lt;a href=&#34;https://www.whitenoise.email/p/everything-has-been-said-but-not&#34;&gt;Everything Has Been Said (But Not By You)&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;From Tom White&amp;rsquo;s piece &lt;a href=&#34;https://www.whitenoise.email/p/everything-has-been-said-but-not&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Everything Has Been Said (But Not By You)&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Because truth doesn&amp;rsquo;t live on the page.
-It lives in the speaking.
-In the wrestling.
-In the failing and the finding your way back.&lt;/p&gt;
-&lt;p&gt;It dies in repetition without revelation,
-in articulation without authenticity.&lt;/p&gt;
-&lt;p&gt;Anyone can carry a tune.
+&lt;p&gt;Because truth doesn’t live on the page.&lt;br&gt;
+IIt lives in the speaking.&lt;br&gt;
+IIn the wrestling.&lt;br&gt;
+IIn the failing and the finding your way back.&lt;/p&gt;
+&lt;p&gt;It dies in repetition without revelation,&lt;br&gt;
+iin articulation without authenticity.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Anyone can carry a tune.&lt;br&gt;
 Only you can give it meaning.&lt;/p&gt;
-&lt;p&gt;So say it again.
-Say it like you mean it.
-Say it until it&amp;rsquo;s yours.&lt;/p&gt;</description>
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So say it again.&lt;br&gt;
+Say it like you mean it.&lt;br&gt;
+Say it until it’s yours.&lt;/p&gt;</description>
     </item>
     <item>
       <title>&#34;Man, its so fun to make these slides.&#34;</title>
@@ -47,6 +278,15 @@ Say it until it&amp;rsquo;s yours.&lt;/p&gt;</description>
 &lt;p&gt;So what&amp;rsquo;s up with the fear? Is it just the normal stagefright that I feel before doing basically anything? Like how before going to hang out with my friends I&amp;rsquo;ll think, &amp;lsquo;ugh I don&amp;rsquo;t want to do this&amp;rsquo; even though I very much do?&lt;/p&gt;</description>
     </item>
     <item>
+      <title>one sign of a great book</title>
+      <link>http://localhost:1313/posts/one-sign-of-a-great-book/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/one-sign-of-a-great-book/</guid>
+      <description>&lt;p&gt;While reading it, you start to think and write in the voice of that book. That happened fast with Lily King’s “Heart the Lover.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Because then I&amp;rsquo;m still going to be 99% me or 90%, but that adjustment is so cool.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s one of the best things books can do, especially when you read it first thing in the morning. I think that&amp;rsquo;s a big part of why that worked this morning - it was the first thing i read this morning.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>photos of a train i really love</title>
       <link>http://localhost:1313/posts/photos-of-a-train-i-really-love/</link>
       <pubDate>Sat, 18 Oct 2025 00:00:00 +0000</pubDate>
@@ -54,7 +294,7 @@ Say it until it&amp;rsquo;s yours.&lt;/p&gt;</description>
       <description>&lt;p&gt;Source:
 Book : SL夢幻 / La Scene de la Locomotive a Vapeur&lt;br&gt;
 Photo : 廣田　尚敬 / Naotaka Hirota
-(shared by: &lt;a href=&#34;https://thisisnthappiness.com/post/789959724768608256&#34;&gt;this isn&amp;rsquo;t happiness&lt;/a&gt;)
+(shared by: &lt;a href=&#34;https://thisisnthappiness.com/post/789959724768608256&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this isn&amp;rsquo;t happiness&lt;/a&gt;)
 &lt;img alt=&#34;521851608_18518843254058018_1564230411357348854_n..jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/521851608_18518843254058018_1564230411357348854_n..jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;521881939_18518843245058018_5956980473052606206_n..jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/521881939_18518843245058018_5956980473052606206_n..jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;523488455_18518843236058018_7946695696191611985_n..jpg&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/523488455_18518843236058018_7946695696191611985_n..jpg&#34;&gt;&lt;/p&gt;
@@ -112,7 +352,7 @@ Positioning has changed the way the advertising game is being played today.
       <link>http://localhost:1313/posts/links/</link>
       <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/links/</guid>
-      <description>&lt;p&gt;Inspired by &lt;a href=&#34;https://matklad.github.io/2025/08/23/links.html&#34;&gt;this&lt;/a&gt; I am starting a links page.&lt;/p&gt;
+      <description>&lt;p&gt;Inspired by &lt;a href=&#34;https://matklad.github.io/2025/08/23/links.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; I am starting a links page.&lt;/p&gt;
 &lt;p&gt;What will I put here is to be determined of course.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update (09-20-25):&lt;/strong&gt;
 I need multiple link pages. One is probably best for self-promo and BAT-promo.&lt;/p&gt;</description>
@@ -122,7 +362,7 @@ I need multiple link pages. One is probably best for self-promo and BAT-promo.&l
       <link>http://localhost:1313/posts/site-i-like-ryan-hemsworth/</link>
       <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/site-i-like-ryan-hemsworth/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.ryanhemsworth.com/&#34;&gt;https://www.ryanhemsworth.com/&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.ryanhemsworth.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.ryanhemsworth.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I mean come on.&lt;/p&gt;
 &lt;p&gt;Also this &amp;lsquo;submit a drawing thing&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(Note: Original had images that couldn&amp;rsquo;t be transferred - check out the site itself!)&lt;/em&gt;&lt;/p&gt;
@@ -135,7 +375,7 @@ I need multiple link pages. One is probably best for self-promo and BAT-promo.&l
       <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/batcave-promo/</guid>
       <description>&lt;p&gt;Check out this piece on rituals and members clubs:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://shindy.substack.com/p/rituals-members-clubs&#34;&gt;https://shindy.substack.com/p/rituals-members-clubs&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://shindy.substack.com/p/rituals-members-clubs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://shindy.substack.com/p/rituals-members-clubs&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Blend vs Mix</title>
@@ -165,7 +405,7 @@ I need multiple link pages. One is probably best for self-promo and BAT-promo.&l
 &lt;p&gt;ADD&lt;/p&gt;
 &lt;p&gt;ideas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;have a chat like &lt;a href=&#34;https://iframe.chat/&#34;&gt;this&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;have a chat like &lt;a href=&#34;https://iframe.chat/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     <item>
@@ -173,7 +413,7 @@ I need multiple link pages. One is probably best for self-promo and BAT-promo.&l
       <link>http://localhost:1313/posts/people-who-seem-awesome/</link>
       <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/people-who-seem-awesome/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://sundogcowboy.com/&#34;&gt;https://sundogcowboy.com/&lt;/a&gt; - Jess Hererra who designed Cody Cook-Parrott&amp;rsquo;s website which seems awesome&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://sundogcowboy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://sundogcowboy.com/&lt;/a&gt; - Jess Hererra who designed Cody Cook-Parrott&amp;rsquo;s website which seems awesome&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Internet Is a Temper Trap Hell Hole</title>
@@ -220,6 +460,17 @@ I need multiple link pages. One is probably best for self-promo and BAT-promo.&l
       <guid>http://localhost:1313/posts/ursula-k-le-guin-appreciation/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m reading her book right now, No Time To Spare, and am filled with this familiar feeling of how it feels when you&amp;rsquo;re reading someone and just feel&amp;hellip;seen. Understood, yes, but more than that, like your own way of understanding itself is being reflected back to you.&lt;/p&gt;
 &lt;p&gt;Or, in other words, she&amp;rsquo;s just smart and I like how her brain moves ideas around, how it thinks and how she shares that thinking with the world.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>just ask claude - old and bad</title>
+      <link>http://localhost:1313/posts/just-ask-claude---old-and-bad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/just-ask-claude---old-and-bad/</guid>
+      <description>&lt;h1 id=&#34;just-ask-claude&#34;&gt;just ask claude&lt;/h1&gt;
+&lt;p&gt;Here&amp;rsquo;s what&amp;rsquo;s actually changing: you think you can&amp;rsquo;t solve this stuff. And you probably can.&lt;/p&gt;
+&lt;p&gt;And if you can&amp;rsquo;t, Claude can help. Or someone on the internet can help. The information is out there. The capability is out there.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m not saying it&amp;rsquo;ll be easy. Some people have a stronger technical awareness. A depth to it. But that&amp;rsquo;s also where people like me can help.&lt;/p&gt;
+&lt;p&gt;Because one of the traps of &amp;ldquo;just ask Claude&amp;rdquo; is that it&amp;rsquo;ll lead you in bad directions.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

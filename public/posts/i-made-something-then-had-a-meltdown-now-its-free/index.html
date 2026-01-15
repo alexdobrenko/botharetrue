@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>How to Paste Screenshots into Claude Code (Mac &#43; PC Guide) | Both Are True</title>
-<meta name="keywords" content="tech, tips">
-<meta name="description" content="Hi it&rsquo;s me Alex. Did you know that you can paste images into Claude Code with control-v (instead of command v)?
-This is big because pasting screenshots is half of how I use the dang AI these days.
-Lemme tell ya.
-Mac (macOS)
-
-Use Ctrl&#43;V (not Command&#43;V).
-This lets you paste screenshots or copied images directly into Claude Code blocks.
-
-Windows (PC)
-
-Use Alt&#43;V (per recent updates).
-Works the same way: paste screenshots from your clipboard into Claude Code.
-
-Linux / WSL Caveat
-Some users report image paste doesn&rsquo;t always work in terminal environments. If that&rsquo;s you, you may need to fall back on drag-and-drop or file upload until it&rsquo;s patched.">
+<title>i made something to help me actually finish projects. then i had a meltdown trying to sell it. now it&#39;s free. | Both Are True</title>
+<meta name="keywords" content="">
+<meta name="description" content="ok so here&rsquo;s what happened.
+I&rsquo;ve been vibe coding for like a year. I have a captioning tool that&rsquo;s 70% done. a game. a blog system. all of them &ldquo;almost there.&rdquo; none of them shipped.
+so I made myself a little system. one project at a time. everything else is dormant. write it down. actually write it down. and it worked. I shipped a zine in one day that had been sitting untouched for weeks.">
 <meta name="author" content="Alex Dobrenko">
-<link rel="canonical" href="http://localhost:1313/pages/paste-screenshots-into-claude-code/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a090830a421002426baafbd314e38f149d77b4c48a12ee9312700d770b27fb26.css" integrity="sha256-oJCDCkIQAkJrqvvTFOOPFJ13tMSKEu6TEnANdwsn&#43;yY=" rel="preload stylesheet" as="style">
+<link rel="canonical" href="http://localhost:1313/posts/i-made-something-then-had-a-meltdown-now-its-free/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -32,7 +20,7 @@ Some users report image paste doesn&rsquo;t always work in terminal environments
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/pages/paste-screenshots-into-claude-code/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/i-made-something-then-had-a-meltdown-now-its-free/">
 <noscript>
     <style>
         #theme-toggle,
@@ -53,38 +41,41 @@ Some users report image paste doesn&rsquo;t always work in terminal environments
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-</head>
-
-<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+       document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
-
-<header class="header">
+</head>
+<body id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
@@ -127,6 +118,11 @@ Some users report image paste doesn&rsquo;t always work in terminal environments
                     <span>Evergreen</span>
                 </a>
             </li>
+            <li>
+                <a href="http://localhost:1313/categories/reading/" title="Reading">
+                    <span>Reading</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -136,56 +132,57 @@ Some users report image paste doesn&rsquo;t always work in terminal environments
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      How to Paste Screenshots into Claude Code (Mac &#43; PC Guide)
+      i made something to help me actually finish projects. then i had a meltdown trying to sell it. now it&#39;s free.
     </h1>
-    <div class="post-meta"><span title='2025-09-28 00:00:00 +0000 UTC'>September 28, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span>
+    <div class="post-meta"><span title='2026-01-04 00:00:00 +0000 UTC'>January 4, 2026</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>Hi it&rsquo;s me Alex. Did you know that you can paste images into Claude Code with control-v (instead of command v)?</p>
-<p>This is big because pasting screenshots is half of how I use the dang AI these days.</p>
-<p>Lemme tell ya.</p>
-<h2 id="mac-macos">Mac (macOS)<a hidden class="anchor" aria-hidden="true" href="#mac-macos">#</a></h2>
-<ul>
-<li>Use <strong>Ctrl+V</strong> (not Command+V).</li>
-<li>This lets you paste screenshots or copied images directly into Claude Code blocks.</li>
-</ul>
-<h2 id="windows-pc">Windows (PC)<a hidden class="anchor" aria-hidden="true" href="#windows-pc">#</a></h2>
-<ul>
-<li>Use <strong>Alt+V</strong> (per recent updates).</li>
-<li>Works the same way: paste screenshots from your clipboard into Claude Code.</li>
-</ul>
-<h2 id="linux--wsl-caveat">Linux / WSL Caveat<a hidden class="anchor" aria-hidden="true" href="#linux--wsl-caveat">#</a></h2>
-<p>Some users report image paste doesn&rsquo;t always work in terminal environments. If that&rsquo;s you, you may need to fall back on drag-and-drop or file upload until it&rsquo;s patched.</p>
-<h2 id="why-it-matters">Why It Matters<a hidden class="anchor" aria-hidden="true" href="#why-it-matters">#</a></h2>
-<p>Being able to <strong>paste images directly into Claude Code</strong> is a game-changer:</p>
-<ul>
-<li>Developers can share bug screenshots instantly.</li>
-<li>Writers and creators can embed visuals in notes.</li>
-<li>No more fumbling with manual uploads.</li>
-</ul>
-<p>So next time you&rsquo;re wondering <em>&ldquo;how do I paste screenshots into Claude Code on Mac or Windows?&quot;</em>—the answer is:</p>
-<ul>
-<li><strong>Mac:</strong> Ctrl+V</li>
-<li><strong>Windows:</strong> Alt+V</li>
-</ul>
-<p>That&rsquo;s the trick. Your Claude Code workflow just got smoother.</p>
+
+  <div class="post-content"><p>ok so here&rsquo;s what happened.</p>
+<p>I&rsquo;ve been vibe coding for like a year. I have a captioning tool that&rsquo;s 70% done. a game. a blog system. all of them &ldquo;almost there.&rdquo; none of them shipped.</p>
+<p>so I made myself a little system. one project at a time. everything else is dormant. write it down. actually write it down. and it worked. I shipped a zine in one day that had been sitting untouched for weeks.</p>
+<p>then I thought: other people have this problem. I should sell this.</p>
+<p>so I made a gumroad page. $99. put together a whole thing. video walkthrough. setup guide. the works.</p>
+<p>posted it to a small subreddit to test. got deleted for self-promo.</p>
+<p>and then I spiraled. like full manic spiral. checking my email for sales that weren&rsquo;t coming. checking reddit. checking whatsapp to see if anyone responded to my message about it. looking for a hit.</p>
+<p>the funniest part is nobody had even really seen it yet. but it already felt like a failure. the failure feeling came before any actual failure.</p>
+<p>I was driving to a thing with my family and I couldn&rsquo;t be present. my wife asked what was wrong and I didn&rsquo;t even know how to explain it. &ldquo;do you know what vibe coding is?&rdquo; she said no. great.</p>
+<p>anyway. I realized a few things:</p>
+<ol>
+<li>trying to sell something to strangers who don&rsquo;t know me is a shitty way to make money</li>
+<li>the spiral wasn&rsquo;t about the product. the spiral just wanted the spiral.</li>
+<li>the thing actually is useful and I still want people to have it</li>
+</ol>
+<p>so now it&rsquo;s free: <a href="https://alexdobrenko.gumroad.com/l/shipthevibe" target="_blank" rel="noopener">Ship the Vibe on Gumroad</a></p>
+<p>it&rsquo;s a claude code command that helps you brain dump all your projects, pick ONE to be primary, and actually ship it. simple. stupidly simple. but that&rsquo;s kind of the point.</p>
+<p>if you&rsquo;re drowning in half-finished stuff maybe it helps. or maybe it doesn&rsquo;t. I don&rsquo;t know. but it helped me and now I&rsquo;m not trying to sell you anything so you can just have it.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/tech/">Tech</a></li>
-      <li><a href="http://localhost:1313/tags/tips/">Tips</a></li>
     </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/hi-brian/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>hi brian</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/what-is-an-editor-anyways/">
+    <span class="title">Next »</span>
+    <br>
+    <span>what is an editor anyways</span>
+  </a>
+</nav>
 
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Both Are True</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
 
     <span>
         Powered by
@@ -197,7 +194,10 @@ Some users report image paste doesn&rsquo;t always work in terminal environments
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
 <div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
   <form class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
@@ -349,9 +349,14 @@ for (var i = 0; i < formContainers.length; i++) {
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -392,11 +397,12 @@ for (var i = 0; i < formContainers.length; i++) {
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

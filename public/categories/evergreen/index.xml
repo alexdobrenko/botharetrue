@@ -22,7 +22,7 @@
       <link>http://localhost:1313/posts/links/</link>
       <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/links/</guid>
-      <description>&lt;p&gt;Inspired by &lt;a href=&#34;https://matklad.github.io/2025/08/23/links.html&#34;&gt;this&lt;/a&gt; I am starting a links page.&lt;/p&gt;
+      <description>&lt;p&gt;Inspired by &lt;a href=&#34;https://matklad.github.io/2025/08/23/links.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; I am starting a links page.&lt;/p&gt;
 &lt;p&gt;What will I put here is to be determined of course.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update (09-20-25):&lt;/strong&gt;
 I need multiple link pages. One is probably best for self-promo and BAT-promo.&lt;/p&gt;</description>
@@ -32,7 +32,7 @@ I need multiple link pages. One is probably best for self-promo and BAT-promo.&l
       <link>http://localhost:1313/posts/people-who-seem-awesome/</link>
       <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/people-who-seem-awesome/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://sundogcowboy.com/&#34;&gt;https://sundogcowboy.com/&lt;/a&gt; - Jess Hererra who designed Cody Cook-Parrott&amp;rsquo;s website which seems awesome&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://sundogcowboy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://sundogcowboy.com/&lt;/a&gt; - Jess Hererra who designed Cody Cook-Parrott&amp;rsquo;s website which seems awesome&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

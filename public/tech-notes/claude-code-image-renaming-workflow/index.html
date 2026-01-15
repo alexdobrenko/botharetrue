@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Image Renaming Workflow Using Claude Code | Both Are True</title>
+<meta name="keywords" content="">
+<meta name="description" content="Image Renaming Workflow Using Claude Code
+Part 1: Step-by-Step Tutorial
+What This Workflow Does
+Use Claude Code to automatically read image files (screenshots, photos, etc.) and rename them with descriptive names based on their content. No more SCR-20251205-gdoq.png nonsense.
+The Setup
+
+Navigate to the folder containing your cryptically-named images
+Open Claude Code in that directory
+
+The Prompt
+Just ask Claude to review and rename:
+review these and rename the photos so its clearer what each one is about
+That&rsquo;s it. That&rsquo;s the whole prompt.">
+<meta name="author" content="Alex Dobrenko">
+<link rel="canonical" href="http://localhost:1313/tech-notes/claude-code-image-renaming-workflow/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tech-notes/claude-code-image-renaming-workflow/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Essays">
+                    <span>Essays</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/evergreen/" title="Evergreen">
+                    <span>Evergreen</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/reading/" title="Reading">
+                    <span>Reading</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Image Renaming Workflow Using Claude Code
+    </h1>
+    <div class="post-meta"><span title='2025-12-05 00:00:00 +0000 UTC'>December 5, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span>
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#image-renaming-workflow-using-claude-code" aria-label="Image Renaming Workflow Using Claude Code">Image Renaming Workflow Using Claude Code</a><ul>
+                        
+                <li>
+                    <a href="#part-1-step-by-step-tutorial" aria-label="Part 1: Step-by-Step Tutorial">Part 1: Step-by-Step Tutorial</a><ul>
+                        
+                <li>
+                    <a href="#what-this-workflow-does" aria-label="What This Workflow Does">What This Workflow Does</a></li>
+                <li>
+                    <a href="#the-setup" aria-label="The Setup">The Setup</a></li>
+                <li>
+                    <a href="#the-prompt" aria-label="The Prompt">The Prompt</a></li>
+                <li>
+                    <a href="#what-claude-does-behind-the-scenes" aria-label="What Claude Does Behind the Scenes">What Claude Does Behind the Scenes</a></li>
+                <li>
+                    <a href="#example-results" aria-label="Example Results">Example Results</a></li>
+                <li>
+                    <a href="#why-this-works" aria-label="Why This Works">Why This Works</a></li>
+                <li>
+                    <a href="#when-to-use-this" aria-label="When to Use This">When to Use This</a></li>
+                <li>
+                    <a href="#time-saved" aria-label="Time Saved">Time Saved</a></li></ul>
+                </li>
+                <li>
+                    <a href="#part-2-blog-post---the-ai-will-read-your-screenshots-so-you-dont-have-to" aria-label="Part 2: Blog Post - &ldquo;The AI Will Read Your Screenshots So You Don&rsquo;t Have To&rdquo;">Part 2: Blog Post - &ldquo;The AI Will Read Your Screenshots So You Don&rsquo;t Have To&rdquo;</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="image-renaming-workflow-using-claude-code">Image Renaming Workflow Using Claude Code<a hidden class="anchor" aria-hidden="true" href="#image-renaming-workflow-using-claude-code">#</a></h1>
+<h2 id="part-1-step-by-step-tutorial">Part 1: Step-by-Step Tutorial<a hidden class="anchor" aria-hidden="true" href="#part-1-step-by-step-tutorial">#</a></h2>
+<h3 id="what-this-workflow-does">What This Workflow Does<a hidden class="anchor" aria-hidden="true" href="#what-this-workflow-does">#</a></h3>
+<p>Use Claude Code to automatically read image files (screenshots, photos, etc.) and rename them with descriptive names based on their content. No more <code>SCR-20251205-gdoq.png</code> nonsense.</p>
+<h3 id="the-setup">The Setup<a hidden class="anchor" aria-hidden="true" href="#the-setup">#</a></h3>
+<ol>
+<li>Navigate to the folder containing your cryptically-named images</li>
+<li>Open Claude Code in that directory</li>
+</ol>
+<h3 id="the-prompt">The Prompt<a hidden class="anchor" aria-hidden="true" href="#the-prompt">#</a></h3>
+<p>Just ask Claude to review and rename:</p>
+<pre tabindex="0"><code>review these and rename the photos so its clearer what each one is about
+</code></pre><p>That&rsquo;s it. That&rsquo;s the whole prompt.</p>
+<h3 id="what-claude-does-behind-the-scenes">What Claude Does Behind the Scenes<a hidden class="anchor" aria-hidden="true" href="#what-claude-does-behind-the-scenes">#</a></h3>
+<ol>
+<li>Lists all files in the directory</li>
+<li>Reads each image (Claude is multimodal - it can actually see images)</li>
+<li>Analyzes the content to understand what each image shows</li>
+<li>Renames files with descriptive names using kebab-case</li>
+</ol>
+<h3 id="example-results">Example Results<a hidden class="anchor" aria-hidden="true" href="#example-results">#</a></h3>
+<p>From Alex&rsquo;s Connor LinkedIn posts folder:</p>
+<p><strong>Before:</strong></p>
+<ul>
+<li>SCR-20251205-gdoq.png</li>
+<li>SCR-20251205-gdrj.png</li>
+<li>SCR-20251205-gdsx.png</li>
+<li>(10 more equally cryptic names&hellip;)</li>
+</ul>
+<p><strong>After:</strong></p>
+<ul>
+<li>podcast-anthony-romero-aclu-staying-centered.png</li>
+<li>podcast-sarah-cooper-bring-full-self-to-work.png</li>
+<li>podcast-question-crowdsource-leader-topics.png</li>
+<li>(10 more actually useful names&hellip;)</li>
+</ul>
+<h3 id="why-this-works">Why This Works<a hidden class="anchor" aria-hidden="true" href="#why-this-works">#</a></h3>
+<ul>
+<li>Claude can read images natively (PNG, JPG, etc.)</li>
+<li>It understands context and can extract meaning</li>
+<li>It follows consistent naming conventions</li>
+<li>It processes all files in one go</li>
+</ul>
+<h3 id="when-to-use-this">When to Use This<a hidden class="anchor" aria-hidden="true" href="#when-to-use-this">#</a></h3>
+<ul>
+<li>Screenshot dumps from social media</li>
+<li>Exported images from presentations</li>
+<li>Downloaded files with auto-generated names</li>
+<li>Any batch of images that need organization</li>
+</ul>
+<h3 id="time-saved">Time Saved<a hidden class="anchor" aria-hidden="true" href="#time-saved">#</a></h3>
+<p>What would take 15-20 minutes of manually opening, reading, and renaming files takes about 30 seconds with Claude.</p>
+<hr>
+<h2 id="part-2-blog-post---the-ai-will-read-your-screenshots-so-you-dont-have-to">Part 2: Blog Post - &ldquo;The AI Will Read Your Screenshots So You Don&rsquo;t Have To&rdquo;<a hidden class="anchor" aria-hidden="true" href="#part-2-blog-post---the-ai-will-read-your-screenshots-so-you-dont-have-to">#</a></h2>
+<p>I just did something that felt both incredibly mundane and slightly magical.</p>
+<p>I had 13 screenshots of Connor&rsquo;s LinkedIn posts sitting in a folder. You know the ones - those Mac screenshot names that look like someone sneezed on a keyboard: <code>SCR-20251205-gdoq.png</code>. I needed to rename them with actual descriptions so I could find them later. The kind of task that makes you question your career choices. Open image. Read it. Think of a name. Type it out. Repeat 12 more times.</p>
+<p>Instead, I asked Claude to do it. Just: &ldquo;review these and rename the photos so it&rsquo;s clearer what each one is about.&rdquo;</p>
+<p>And it did. All of them. In seconds. Because Claude can read images. It looked at each screenshot of a LinkedIn post, understood what it was about, and renamed it something useful like <code>podcast-sarah-cooper-failure-snl-audition.png</code> instead of <code>SCR-20251205-gduk.png</code>.</p>
+<p>Here&rsquo;s what&rsquo;s both true: This is a trivial task that saved me maybe 15 minutes. And also, these 15-minute tasks are exactly why you never get to the work that matters. You can dismiss this as &ldquo;just file organization&rdquo; or you can recognize it as reclaiming your attention for something better. Both are true.</p>
+<p>The deeper thing here isn&rsquo;t about automation or efficiency. It&rsquo;s about noticing where your brain is being wasted. I wasn&rsquo;t going to learn anything from reading those LinkedIn posts for the fifth time while renaming files. I already pulled the insights I needed. This was pure organizational overhead - necessary but not meaningful. The kind of thing that compounds into hours of &ldquo;where did my day go?&rdquo;</p>
+<p>What gets me is how simple it was. No complex workflow. No API setup. Just ask. The AI equivalent of &ldquo;hey, could you handle this tedious thing while I go do something that requires an actual human?&rdquo; Small wins compound. This one just bought me 15 minutes to write instead of rename. I&rsquo;ll take it.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+<div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
+  <form class="newsletter-form"
+    action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
+    method="POST"
+    style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%;">
+    <input class="newsletter-form-input"
+      name="newsletter-form-input"
+      type="email"
+      placeholder="you@example.com"
+      required
+      style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px; margin: 0px 10px 0px 0px; width: 100%; max-width: 300px; min-width: 100px; background: rgb(255, 255, 255); border: 1px solid rgb(209, 213, 219); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; padding: 8px 12px;">
+    <button
+      type="submit"
+      class="newsletter-form-button"
+      style="background: rgb(233, 127, 0); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: flex; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">
+      Sign up to get my dumb weird emails
+    </button>
+    <button
+      type="button"
+      class="newsletter-loading-button"
+      style="background: rgb(233, 127, 0); font-size: 14px; color: rgb(255, 255, 255); font-family: Inter, sans-serif; display: none; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">
+      Please wait...
+    </button>
+  </form>
+  <div class="newsletter-success" style="display: none; align-items: center; justify-content: center; width: 100%;">
+    <p class="newsletter-success-message" style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px;">
+      Well, color me gobsmacked. You did it. Get ready for some emails.
+    </p>
+  </div>
+  <div class="newsletter-error" style="display: none; align-items: center; justify-content: center; width: 100%;">
+    <p class="newsletter-error-message" style="font-family: Inter, sans-serif; color: rgb(185, 28, 28); font-size: 14px;">
+      Oops! Something went wrong, please try again
+    </p>
+  </div>
+  <button
+    class='newsletter-back-button'
+    type='button'
+    style='color:#6b7280;font: 14px, Inter, sans-serif;margin:10px auto;text-align:center;display:none;background:transparent;border:none;cursor:pointer'
+    onmouseout='this.style.textDecoration="none"'
+    onmouseover='this.style.textDecoration="underline"'>
+    &larr; Back
+  </button>
+</div>
+
+<script>
+function submitHandler(event) {
+  event.preventDefault();
+  var container = event.target.parentNode;
+  var form = container.querySelector(".newsletter-form");
+  var formInput = container.querySelector(".newsletter-form-input");
+  var success = container.querySelector(".newsletter-success");
+  var errorContainer = container.querySelector(".newsletter-error");
+  var errorMessage = container.querySelector(".newsletter-error-message");
+  var backButton = container.querySelector(".newsletter-back-button");
+  var submitButton = container.querySelector(".newsletter-form-button");
+  var loadingButton = container.querySelector(".newsletter-loading-button");
+
+
+  const rateLimit = () => {
+    errorContainer.style.display = "flex";
+    errorMessage.innerText = "Too many signups, please try again in a little while";
+    submitButton.style.display = "none";
+    formInput.style.display = "none";
+    backButton.style.display = "block";
+  }
+
+  var time = new Date();
+  var timestamp = time.valueOf();
+  var previousTimestamp = localStorage.getItem("loops-form-timestamp");
+
+  if (previousTimestamp && Number(previousTimestamp) + 60000 > timestamp) {
+    rateLimit();
+    return;
+  }
+  localStorage.setItem("loops-form-timestamp", timestamp);
+
+  submitButton.style.display = "none";
+  loadingButton.style.display = "flex";
+
+  var formBody = "userGroup=&mailingLists=&email="
+    + encodeURIComponent(formInput.value);
+
+  fetch(event.target.action, {
+    method: "POST",
+    body: formBody,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+  })
+    .then((res) => [res.ok, res.json(), res])
+    .then(([ok, dataPromise, res]) => {
+      if (ok) {
+        success.style.display = "flex";
+        form.reset();
+      } else {
+        dataPromise.then(data => {
+          errorContainer.style.display = "flex";
+          errorMessage.innerText = data.message ? data.message : res.statusText;
+        });
+      }
+    })
+    .catch(error => {
+      if (error.message === "Failed to fetch") {
+        rateLimit();
+        return;
+      }
+      errorContainer.style.display = "flex";
+      if (error.message) errorMessage.innerText = error.message;
+      localStorage.setItem("loops-form-timestamp", '');
+    })
+    .finally(() => {
+      formInput.style.display = "none";
+      loadingButton.style.display = "none";
+      backButton.style.display = "block";
+    });
+}
+
+function resetFormHandler(event) {
+  var container = event.target.parentNode;
+  var formInput = container.querySelector(".newsletter-form-input");
+  var success = container.querySelector(".newsletter-success");
+  var errorContainer = container.querySelector(".newsletter-error");
+  var errorMessage = container.querySelector(".newsletter-error-message");
+  var backButton = container.querySelector(".newsletter-back-button");
+  var submitButton = container.querySelector(".newsletter-form-button");
+
+  success.style.display = "none";
+  errorContainer.style.display = "none";
+  errorMessage.innerText = "Oops! Something went wrong, please try again";
+  backButton.style.display = "none";
+  formInput.style.display = "flex";
+  submitButton.style.display = "flex";
+}
+
+var formContainers = document.getElementsByClassName("newsletter-form-container");
+for (var i = 0; i < formContainers.length; i++) {
+  var formContainer = formContainers[i]
+  var handlersAdded = formContainer.classList.contains('newsletter-handlers-added')
+  if (handlersAdded) continue;
+  formContainer
+    .querySelector(".newsletter-form")
+    .addEventListener("submit", submitHandler);
+  formContainer
+    .querySelector(".newsletter-back-button")
+    .addEventListener("click", resetFormHandler);
+  formContainer.classList.add("newsletter-handlers-added");
+}
+</script>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

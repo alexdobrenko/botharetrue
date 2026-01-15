@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,38 +40,41 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-</head>
-
-<body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+       document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
-
-<header class="header">
+</head>
+<body class="list" id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
@@ -135,24 +138,164 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">tech note to self - 4k-screenshot-hack
+    <h2 class="entry-hint-parent">Building a Reddit Briefing Agent That Emails You What Matters
     </h2>
   </header>
   <div class="entry-content">
-    <p>You can take 4K screenshots in Chrome dev tools.
-F12 → toggle device emulation → add custom device (1920x1080, 4x pixel ratio) → three dots → capture screenshot.
-Also does full-page screenshots.
-Video
-Might come in handy when recording screen!
-</p>
+    <p>Part 1: Step-by-Step Tutorial What This Workflow Does Scrapes a subreddit via Apify, sends the posts to Claude for analysis, and emails you a smart summary. Runs automatically every 8 hours via GitHub Actions. You wake up to a briefing that tells you what’s actually worth knowing.
+The Setup GitHub repo with Actions enabled Secrets configured: APIFY_TOKEN, ANTHROPIC_API_KEY, RESEND_API_KEY, EMAIL_TO Python script that orchestrates the whole thing The Prompt The analysis prompt tells Claude to be a “sharp, no-BS analyst” and organize findings into:
+...</p>
   </div>
-  <footer class="entry-footer"><span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
-  <a class="entry-link" aria-label="post link to tech note to self - 4k-screenshot-hack" href="http://localhost:1313/tech-notes/tech-note-to-self---4k-screenshot-hack/"></a>
+  <footer class="entry-footer"><span title='2025-12-30 00:00:00 +0000 UTC'>December 30, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Building a Reddit Briefing Agent That Emails You What Matters" href="http://localhost:1313/tech-notes/claude-code-reddit-briefing-agent/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Building a Zine Email Drip Campaign with Claude Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Building a Zine Email Drip Campaign with Claude Code Part 1: Tutorial The project: Turn a month of daily journal entries into a “zine” — 58 notes delivered via email over ~30 days, at roughly the same times they were originally written. Plus a website to read everything at once.
+The stack:
+Content: Markdown files in Obsidian Website: Static HTML on Netlify Email delivery: Loops.so Build tool: Python script &#43; Claude Code The Content Structure Source files live in an Obsidian vault with YAML frontmatter:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-26 00:00:00 +0000 UTC'>December 26, 2025</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Building a Zine Email Drip Campaign with Claude Code" href="http://localhost:1313/tech-notes/building-a-zine-email-drip-campaign/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Blog Publishing Workflow Using Claude Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Blog Publishing Workflow Using Claude Code Part 1: Tutorial The setup: I write in Obsidian. My blog runs on Hugo with the PaperMod theme, hosted on Netlify. I needed a way to go from markdown file → live on botharetrue.com with one command.
+The solution: A bash script that syncs from my vault, converts Obsidian syntax to Hugo, handles images, commits to git, and waits for Netlify deployment.
+Folder Structure Source (Obsidian vault):
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-10 00:00:00 +0000 UTC'>December 10, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Blog Publishing Workflow Using Claude Code" href="http://localhost:1313/tech-notes/claude-code-blog-publishing-workflow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Chief of Staff Workflow Using Claude Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Chief of Staff Workflow Using Claude Code Part 1: Tutorial The problem: Claude doesn’t remember anything between sessions. Every conversation starts fresh. But I need a thinking partner who knows my projects, clients, deadlines, and what I’m avoiding.
+The solution: A slash command &#43; session files that Claude reads every time.
+Setup:
+Create the slash command at ~/.claude/commands/chief-of-staff.md: # Chief of Staff You are my Chief of Staff. [Define the persona, values, responsibilities...] ## First thing: Read the session files Always start by reading: /path/to/chief-of-staff-sessions/ $ARGUMENTS Create a session folder with a brain dump file: /chief-of-staff-sessions/ ├── brain-dump.md # Main state: all clients, tasks, open loops ├── topics-for-connor.md # Running list for specific people └── [add more as needed] Structure the brain dump by client/project: ## CLIENT: Stacks &amp; Joules - **Status:** Social scheduled for month ✓ - **This week:** End-of-year report deck - **Owed:** Fran &amp; Amoret thank-you post ## CLIENT: FMLY - **Deadline:** Dec 22 - **Status:** Website prototype in progress ... How I use it:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-10 00:00:00 +0000 UTC'>December 10, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Chief of Staff Workflow Using Claude Code" href="http://localhost:1313/tech-notes/claude-code-chief-of-staff-workflow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Image Naming Workflow Using Claude Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Image Naming Workflow Using Claude Code Part 1: Tutorial The task: 125 event photos named 001.jpg through 125.jpg. Need them searchable and web-ready.
+What I did:
+Asked Claude Code to review images in batches of 10 It looked at each image, described what it saw, renamed the file Then ran a resize script to get everything under 1MB The prompt:
+Review images 001.jpg through 010.jpg in [folder] and rename them based on what&#39;s in each image Naming pattern Claude used:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-08 00:00:00 +0000 UTC'>December 8, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Image Naming Workflow Using Claude Code" href="http://localhost:1313/tech-notes/claude-code-image-naming-workflow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Video Renaming Workflow Using Claude Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Video Renaming Workflow Using Claude Code Part 1: Step-by-Step Tutorial What This Workflow Does Use Claude Code to automatically analyze video files and rename them with descriptive names based on their visual content. No more 1.MP4, 2.MP4 chaos.
+The Setup Have your videos in a folder (local drive or external) Open Claude Code Optional: Have related photos with good names for context The Prompt Just tell Claude what you need:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-08 00:00:00 +0000 UTC'>December 8, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Video Renaming Workflow Using Claude Code" href="http://localhost:1313/tech-notes/claude-code-video-renaming-workflow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Creating Custom Slash Commands in Claude Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Creating Custom Slash Commands in Claude Code Part 1: Step-by-Step Tutorial What This Workflow Does Create a reusable slash command in Claude Code that you can trigger anytime to document your session and turn it into a blog post.
+The Setup Alex had just used Claude to rename a bunch of screenshot files. Then asked:
+awesome. so now is there a slash command I can use to do this whenever i&#39;m using claude code? What Claude Did Created the commands directory (if it doesn’t exist):
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-05 00:00:00 +0000 UTC'>December 5, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Creating Custom Slash Commands in Claude Code" href="http://localhost:1313/tech-notes/claude-code-custom-slash-commands/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Image Renaming Workflow Using Claude Code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Image Renaming Workflow Using Claude Code Part 1: Step-by-Step Tutorial What This Workflow Does Use Claude Code to automatically read image files (screenshots, photos, etc.) and rename them with descriptive names based on their content. No more SCR-20251205-gdoq.png nonsense.
+The Setup Navigate to the folder containing your cryptically-named images Open Claude Code in that directory The Prompt Just ask Claude to review and rename:
+review these and rename the photos so its clearer what each one is about That’s it. That’s the whole prompt.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-05 00:00:00 +0000 UTC'>December 5, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to Image Renaming Workflow Using Claude Code" href="http://localhost:1313/tech-notes/claude-code-image-renaming-workflow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">claude-code-commands-vs-agents
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Quick Version In Claude Code, there are two ways to extend what Claude can do: commands (also called skills) and agents. They live in similar places and look almost identical. But they work completely differently.
+(If you see “skill” anywhere in Claude Code, it’s the same thing as a command. The terms are interchangeable.)
+Commands are things you invoke. You type /chief-of-staff and suddenly Claude has a bunch of context loaded about how to be your chief of staff.
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to claude-code-commands-vs-agents" href="http://localhost:1313/tech-notes/claude-code-commands-vs-agents/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">ghostwriting-linkedin-post-for-ceo
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Step-by-Step Tutorial What This Does Research a podcast guest’s social media presence across platforms, analyze their actual posting style, and draft LinkedIn copy that sounds like them—not like a marketing team wrote it.
+The Prompts Research phase:
+Can you research the details for [Guest] across social platforms and for [Company] across socials? And what other channels they might have - email newsletters etc Voice analysis:
+Can you search thru what [Guest] posts on his own LinkedIn to see if we have precedent for how to do this? Drafting:
+...</p>
+  </div>
+  <footer class="entry-footer"><span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to ghostwriting-linkedin-post-for-ceo" href="http://localhost:1313/tech-notes/ghostwriting-linkedin-post-for-ceo/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/tech-notes/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Both Are True</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
 
     <span>
         Powered by
@@ -164,7 +307,10 @@ Might come in handy when recording screen!
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
 <div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
   <form class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
@@ -316,9 +462,14 @@ for (var i = 0; i < formContainers.length; i++) {
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -359,11 +510,12 @@ for (var i = 0; i < formContainers.length; i++) {
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

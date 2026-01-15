@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>say it until it&#39;s yours | Both Are True</title>
-<meta name="keywords" content="craft, writing">
+<meta name="keywords" content="">
 <meta name="description" content="From Tom White&rsquo;s piece Everything Has Been Said (But Not By You)
 
-Because truth doesn&rsquo;t live on the page.
-It lives in the speaking.
-In the wrestling.
-In the failing and the finding your way back.
+Because truth doesn’t live on the page.
+IIt lives in the speaking.
+IIn the wrestling.
+IIn the failing and the finding your way back.
 It dies in repetition without revelation,
-in articulation without authenticity.
+iin articulation without authenticity.
 Anyone can carry a tune.
 Only you can give it meaning.
+
+
 So say it again.
 Say it like you mean it.
-Say it until it&rsquo;s yours.">
+Say it until it’s yours.">
 <meta name="author" content="Alex Dobrenko">
 <link rel="canonical" href="http://localhost:1313/posts/say-it-until-its-yours/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -51,38 +53,41 @@ Say it until it&rsquo;s yours.">
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-</head>
-
-<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+       document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
-
-<header class="header">
+</head>
+<body id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
@@ -145,29 +150,35 @@ Say it until it&rsquo;s yours.">
 
 </div>
   </header> 
-  <div class="post-content"><p>From Tom White&rsquo;s piece <a href="https://www.whitenoise.email/p/everything-has-been-said-but-not">Everything Has Been Said (But Not By You)</a></p>
+
+  <div class="post-content"><p>From Tom White&rsquo;s piece <a href="https://www.whitenoise.email/p/everything-has-been-said-but-not" target="_blank" rel="noopener">Everything Has Been Said (But Not By You)</a></p>
 <blockquote>
-<p>Because truth doesn&rsquo;t live on the page.
-It lives in the speaking.
-In the wrestling.
-In the failing and the finding your way back.</p>
-<p>It dies in repetition without revelation,
-in articulation without authenticity.</p>
-<p>Anyone can carry a tune.
+<p>Because truth doesn’t live on the page.<br>
+IIt lives in the speaking.<br>
+IIn the wrestling.<br>
+IIn the failing and the finding your way back.</p>
+<p>It dies in repetition without revelation,<br>
+iin articulation without authenticity.</p></blockquote>
+<p>Anyone can carry a tune.<br>
 Only you can give it meaning.</p>
-<p>So say it again.
-Say it like you mean it.
-Say it until it&rsquo;s yours.</p></blockquote>
+<blockquote>
+</blockquote>
+<p>So say it again.<br>
+Say it like you mean it.<br>
+Say it until it’s yours.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/craft/">Craft</a></li>
-      <li><a href="http://localhost:1313/tags/writing/">Writing</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/debbie-weil-wrote-a-nice-thing-about-my-last-workshop/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Debbie Weil wrote a nice thing about my last workshop!!</span>
+  </a>
   <a class="next" href="http://localhost:1313/posts/man-its-so-fun-to-make-these-slides./">
     <span class="title">Next »</span>
     <br>
@@ -180,7 +191,7 @@ Say it until it&rsquo;s yours.</p></blockquote>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Both Are True</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
 
     <span>
         Powered by
@@ -192,7 +203,10 @@ Say it until it&rsquo;s yours.</p></blockquote>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
 <div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
   <form class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
@@ -344,9 +358,14 @@ for (var i = 0; i < formContainers.length; i++) {
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -387,11 +406,12 @@ for (var i = 0; i < formContainers.length; i++) {
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

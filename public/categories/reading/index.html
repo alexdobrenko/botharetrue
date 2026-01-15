@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,38 +40,41 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
 </noscript>
-</head>
-
-<body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
+       document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
-
-<header class="header">
+</head>
+<body class="list" id="top">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Both Are True (Alt + H)">Both Are True</a>
@@ -135,6 +138,65 @@
 
 
 </div>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">what is an editor anyways
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>asking myself this as I read about a man named Lish.
+Gordon Lish.
+Editor of Raymond Carver. Friend of Don Delillio.
+I learned about him as a quick aside mentioned here in this YT video on White Noise which sent me googling and found me here at this ’expose’ in the nytimes in 1998 about how Lish edited Carver’s early works quite a lot, it seemed, and perhaps enough to say that he was the guy who wrote them?
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-12-09 00:00:00 +0000 UTC'>December 9, 2025</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to what is an editor anyways" href="http://localhost:1313/posts/what-is-an-editor-anyways/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">blogging for yourself vs blogging for an audience
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>there’s a difference! Because this blog right now is still an infant, and literally I think only three people have ever even been given the link, I am able to be much more sensitive to the shifting experience of writing it as more people become aware of it.
+for example: i shared it with Michael Dean last week (Michael if you’re reading this, which you probably are cuz i’ll probably send it to you, hi!).
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-01 00:00:00 +0000 UTC'>November 1, 2025</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to blogging for yourself vs blogging for an audience" href="http://localhost:1313/posts/blogging-for-yourself-vs-blogging-for-an-audience/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">prompts
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I love collecting prompts and just found a bunch of real weird ones in a book titled Learning for people who prefer not to be taught
+Some prompts:
+Just add hot water and stir Internship Lottery Performative Artists’ Talks </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-29 00:00:00 +0000 UTC'>October 29, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to prompts" href="http://localhost:1313/posts/prompts/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">one sign of a great book
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>While reading it, you start to think and write in the voice of that book. That happened fast with Lily King’s “Heart the Lover.&#34;
+Because then I’m still going to be 99% me or 90%, but that adjustment is so cool.
+That’s one of the best things books can do, especially when you read it first thing in the morning. I think that’s a big part of why that worked this morning - it was the first thing i read this morning.
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-10-20 00:00:00 +0000 UTC'>October 20, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Alex Dobrenko</span></footer>
+  <a class="entry-link" aria-label="post link to one sign of a great book" href="http://localhost:1313/posts/one-sign-of-a-great-book/"></a>
+</article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
@@ -212,7 +274,7 @@ Or, in other words, she’s just smart and I like how her brain moves ideas arou
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Both Are True</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Both Are True</a></span> · 
 
     <span>
         Powered by
@@ -224,7 +286,10 @@ Or, in other words, she’s just smart and I like how her brain moves ideas arou
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
+</a><script src="https://cdn.jsdelivr.net/npm/instantclick@3.1.0/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>
+  InstantClick.init();
+</script><style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');</style>
 <div class="newsletter-form-container" style="margin: 40px 0; padding: 20px; text-align: center;">
   <form class="newsletter-form"
     action="https://app.loops.so/api/newsletter-form/cmevsk1l41gr4yw0iyrmj613p"
@@ -376,9 +441,14 @@ for (var i = 0; i < formContainers.length; i++) {
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -419,11 +489,12 @@ for (var i = 0; i < formContainers.length; i++) {
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })
