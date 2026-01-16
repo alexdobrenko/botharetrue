@@ -70,21 +70,4 @@ Otherwise I’ll run out into the cold and try to warm myself real fast with the
 
 Because the cold is a fear and the warmth is the truth we can return to, I think, I hope, I believe, even and especially when it’s freezing.
 
-It was warm in the womb, then we came out and it got cold, so we cried and the people who made us were there, bundling us up and keeping us safe until we could go out into the cold again, no jacket needed, no i’m not cold mom i told you, i’m fine, except i’m not. I’m freezing, sometimes, until i feel safe enough to say so, because what else is love if not the ability to say we need it? And in that honesty, because of it, the walls come down and we’re warm again, cozy, safe, if only for a little while.
-
-## scraps
-
-So many words for wall and warmth, all signifying the same thing, after all: love. 
-
-T
-
-May this piece warm you up a little bit, you and yours, the 
-
-Friends and pals and even rivals, idk, just other people with whom you're in relationship regardless of what happens out there, in the colds. 
-
-
-The world is cold, or at least it feels that way when we embark upon it, excited to share our creative ideas with the world.
-
-So, we need a cozy, warm sauna home to come back to.  
-
-Because when we do have that, the going out into the cold wilds of sharing your stuff, publishing it, putting it out there, it stops being so cold because your body knows that there's a warm place 
+It was warm in the womb, then we came out and it got cold, so we cried and the people who made us were there, bundling us up and keeping us safe until we could go out into the cold again, no jacket needed, no i'm not cold mom i told you, i'm fine, except i'm not. I'm freezing, sometimes, until i feel safe enough to say so, because what else is love if not the ability to say we need it? And in that honesty, because of it, the walls come down and we're warm again, cozy, safe, if only for a little while.
